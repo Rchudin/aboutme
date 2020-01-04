@@ -43,3 +43,11 @@ a {
   color: black;
   text-decoration: none;
 }
+
+.between_flex{
+  flex: 1 0 auto;
+}
+
+.visibility{
+  visibility: visible;
+}

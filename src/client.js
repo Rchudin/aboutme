@@ -1,6 +1,7 @@
 import React from 'react';
 import AppContainer from "./components/app/AppContainer";
 import ReactDOM from 'react-dom';
+import {BrowserRouter} from "react-router-dom";
 import "./languages/i18n";
 import './assets/color.css';
 import './assets/index.css';
@@ -8,7 +9,9 @@ import './assets/fonts/Montserrat/stylesheet.css'
 import '@babel/polyfill';
 
 const Application = (
-    <AppContainer/>
+    <BrowserRouter>
+        <AppContainer/>
+    </ BrowserRouter>
 );
 
 if (process.env.SSR) {

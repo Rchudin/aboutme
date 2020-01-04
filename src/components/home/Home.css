@@ -1,0 +1,30 @@
+.home_content{
+    flex: 1 0 auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+.home_from_1{
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 38px;
+    text-transform: capitalize;
+    color: var(--color-accent);
+}
+
+.home_from_2{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 38px;
+    text-transform: capitalize;
+    color: var(--color-accent);
+}
+.home_from_3{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 38px;
+    text-transform: capitalize;
+    color: var(--color-second);
+}

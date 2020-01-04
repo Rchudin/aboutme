@@ -49,8 +49,10 @@
     "i18next": "^19.0.2",
     "i18next-browser-languagedetector": "^4.0.1",
     "react": "^16.12.0",
+    "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.12.0",
     "react-i18next": "^11.2.7",
+    "react-router-config": "^5.1.1",
     "react-router-dom": "^5.1.2"
   }
 }
