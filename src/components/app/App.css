@@ -1,0 +1,51 @@
+.app{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.app_am {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.app_am h1 {
+    margin: 2em 0 0 0;
+    padding: 0;
+    color: white;
+    font-size: 3em;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: black 0 5px 10px;
+}
+
+.app_block_social {
+    margin-top: 0.5em;
+}
+
+.app_block_social svg, span {
+    margin: 0.5em;
+    height: 27px;
+    width: 27px;
+    fill: white;
+    cursor: pointer;
+}
+
+.app_eclipse{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    border: red 20px solid;
+    box-shadow:
+            0 0 0px red,
+            inset 0 0 0px red,
+            0 0 20px red,
+            inset 0 0 20px red,
+            0 0 0px red,
+            inset 0 0 0 red;
+}

@@ -1,46 +1,56 @@
 {
   "name": "aboutme",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Rchudin/aboutme.git",
+  "author": "rchudin <ruslan.chudin@yandex.ru>",
+  "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "core-js": "^3.4.3",
-    "vue": "^2.6.10",
-    "vue-i18n": "^8.15.1"
+    "start": "node ./dist/server.js",
+    "dev": "webpack-dev-server --config webpack/webpack.dev.js --mode development",
+    "build:spa": "webpack -p --config webpack/webpack.build.js --mode production",
+    "build:client": "webpack -p --config webpack/webpack.client.js --mode production",
+    "build:server": "webpack -p --config webpack/webpack.server.js --mode production",
+    "serve": "serve ./dist/static -p 8001"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.1.0",
-    "@vue/cli-plugin-eslint": "^4.1.0",
-    "@vue/cli-service": "^4.1.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^3.0.1",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.4.0",
+    "express": "^4.17.1",
+    "file-loader": "^5.0.2",
+    "fs": "^0.0.1-security",
+    "html-webpack-plugin": "^3.2.0",
+    "interpolate-html-plugin": "^3.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.0",
+    "null-loader": "^3.0.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sass-loader": "^8.0.0",
+    "style": "^0.0.3",
+    "style-loader": "^1.1.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1",
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2",
+    "webpack-stats-plugin": "^0.3.1"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
-  "vue": {
-    "publicPath": "/about/"
-
+  "dependencies": {
+    "i18next": "^19.0.2",
+    "i18next-browser-languagedetector": "^4.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-i18next": "^11.2.7",
+    "react-router-dom": "^5.1.2"
   }
 }
