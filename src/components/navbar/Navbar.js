@@ -1,10 +1,10 @@
 import React from "react";
 import "./Navbar.css"
-import {GitHubIcon, InIcon} from "../icons/icons";
+import {FIcon, GitHubIcon, InIcon} from "../icons/icons";
 import {useTranslation} from "react-i18next";
 import {NavLink} from "react-router-dom";
 
-export default ({lng, selected}) => {
+export default () => {
     const changeLanguage = () => {
         let lng = i18n.language;
         if (lng === "en") {
@@ -23,22 +23,21 @@ export default ({lng, selected}) => {
         <div className="navbar">
             <div className="navbar_top">
                 <div className="navbar_block_lng">
-                    <span className={`navbar_lng ${(lng && lng === "ru") ? "" : "navbar_lng_deactivated"}`}
-                          onClick={changeLanguage}>
+                    <span className="navbar_lng  navbar_lng_deactivated" onClick={changeLanguage}>
                         {(i18n.language === "ru") ? "en" : "ru"}
                     </span>
                     <div/>
-                    <span className={`navbar_lng ${(!lng || lng === "en") ? "" : "navbar_lng_deactivated"}`}>
+                    <span className="navbar_lng">
                         {i18n.language}
                     </span>
                 </div>
             </div>
             <ul className="navbar_middle">
-                <li className={`navbar_li ${(selected && selected === "about") ? "navbar_li_selected" : ""}`}>
+                <NavLink to="/about" activeClassName="navbar_li_selected" className="navbar_li">
                     <div/>
                     <span>{t('about')}</span>
-                </li>
-                <li className={`navbar_li ${(selected && selected === "projects") ? "navbar_li_selected" : ""}`}>
+                </NavLink>
+                <li className="navbar_li">
                     <div/>
                     <span>{t('projects')}</span>
                 </li>
@@ -49,9 +48,12 @@ export default ({lng, selected}) => {
             </ul>
             <div className="navbar_bottom">
                 <div className="navbar_social">
-                    <a target="_blank" href="https://ru.linkedin.com/">
-                        <InIcon/>
+                    <a target="_blank" href="https://www.facebook.com/ruslan.chudin">
+                        <FIcon/>
                     </a>
+                    {/*<a target="_blank" href="https://ru.linkedin.com/">*/}
+                    {/*    <InIcon/>*/}
+                    {/*</a>*/}
                     <a target="_blank" href="https://github.com/Rchudin">
                         <GitHubIcon/>
                     </a>

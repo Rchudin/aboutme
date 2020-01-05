@@ -1,6 +1,7 @@
 import React from 'react';
 import express from 'express';
 import {renderToString} from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom'
 import AppContainer from "./components/app/AppContainer";
 
 const path = require('path');
@@ -15,7 +16,9 @@ app.get('/*', (req, res) => {
     const context = {};
     // eslint-disable-next-line no-shadow
     const app = renderToString(
+        <StaticRouter location={req.url} context={context}>
             <AppContainer/>
+        </StaticRouter>
     );
 
     const indexFile = path.resolve('dist/index.html');

@@ -1,0 +1,34 @@
+.about{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 33px;
+}
+
+.about_im{
+    max-width: 65vw;
+
+    color: var(--color-accent);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2.2em;
+    margin-bottom: .5em;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.about_txt{
+    max-width: 65vw;
+
+    color: var(--color-accent);
+    width: 23.5em;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 1.3em;
+    letter-spacing: 0.05em;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}

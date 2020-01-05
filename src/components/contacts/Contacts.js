@@ -2,26 +2,32 @@ import React, {useState} from "react";
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import {useTranslation} from "react-i18next";
 import "./Contacts.css"
+const yandex = "ruslan.chudin@yandex.ru";
+const gmail = "ruslan.chudin@yandex.ru";
+// const number = "+7 (926) 439 96 16";
+const telegram = "t.me/rchudin";
 
-const number = "+7 (926) 439 96 16";
-const email = "ruslan.chudin@yandex.ru";
 
 export default () => {
     const {t} = useTranslation();
-    const [copyEmail, setCopyEmail] = useState(false);
-    const [copyNumber, setCopyNumber] = useState(false);
+    const [copyYandex, setCopyYandex] = useState(false);
+    // const [copyNumber, setCopyNumber] = useState(false);
+    const [copyTelegram, setCopyTelegram] = useState(false);
 
-
-    const onClickEmail = () => {
-        setCopyEmail(true);
-        setTimeout(() => setCopyEmail(false), 800);
+    const onClickYandex = () => {
+        setCopyYandex(true);
+        setTimeout(() => setCopyYandex(false), 800);
     };
 
-    const onClickNumber = () => {
-        setCopyNumber(true);
-        setTimeout(() => setCopyNumber(false), 800);
-    };
+    // const onClickNumber = () => {
+    //     setCopyNumber(true);
+    //     setTimeout(() => setCopyNumber(false), 800);
+    // };
 
+    const onClickTelegram = () => {
+        setCopyTelegram(true);
+        setTimeout(() => setCopyTelegram(false), 800);
+    };
 
 
     return (
@@ -37,12 +43,12 @@ export default () => {
             </div>
             <div className={"between_flex"}/>
             <div className={"contacts_data"}>
-                <CopyToClipboard text={email}>
-                    <div className={"contacts_data_li"} onClick={onClickEmail}>
+                <CopyToClipboard text={yandex}>
+                    <div className={"contacts_data_li"} onClick={onClickYandex}>
                         <span>
-                            {email}
+                            {yandex}
                             {
-                                copyEmail && <span className={"contacts_tooltip_text"}>
+                                copyYandex && <span className={"contacts_tooltip_text"}>
                                      {t('copied')}
                                 </span>
                             }
@@ -50,12 +56,24 @@ export default () => {
                         </span>
                     </div>
                 </CopyToClipboard>
-                <CopyToClipboard text={number}>
-                    <div className={"contacts_data_li"} onClick={onClickNumber}>
+                {/*<CopyToClipboard text={number}>*/}
+                {/*    <div className={"contacts_data_li"} onClick={onClickNumber}>*/}
+                {/*        <span>*/}
+                {/*            {number}*/}
+                {/*            {*/}
+                {/*                copyNumber && <span className={"contacts_tooltip_text"}>*/}
+                {/*                     {t('copied')}*/}
+                {/*                </span>*/}
+                {/*            }*/}
+                {/*        </span>*/}
+                {/*    </div>*/}
+                {/*</CopyToClipboard>*/}
+                <CopyToClipboard text={telegram}>
+                    <div className={"contacts_data_li"} onClick={onClickTelegram}>
                         <span>
-                            {number}
+                            {telegram}
                             {
-                                copyNumber && <span className={"contacts_tooltip_text"}>
+                                copyTelegram && <span className={"contacts_tooltip_text"}>
                                      {t('copied')}
                                 </span>
                             }
