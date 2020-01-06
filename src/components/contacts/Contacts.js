@@ -34,11 +34,11 @@ export default () => {
         <div className="contacts">
             <div className={"between_flex"}/>
             <div className={"contacts_main"}>
-                <div className="contacts_main_1">{t('CONTACTS.get in touch')}</div>
+                <div className="contacts_main_1">{t('get in touch')}</div>
                 <div className={"contacts_main_2"}>
-                    {t('CONTACTS.let\'s build something')}
+                    {t('let\'s build something')}
                     <br/>
-                    {t('CONTACTS.great together')}
+                    {t('great together')}
                 </div>
             </div>
             <div className={"between_flex"}/>
