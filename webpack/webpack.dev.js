@@ -41,11 +41,22 @@ module.exports = merge(baseConfig, {
         new webpack.HotModuleReplacementPlugin(),
     ],
     devServer: {
+        host: '0.0.0.0',
         contentBase: './public',
         hot: true,
         port: 3000,
-        open: true,
+        noInfo: true,
+        // open: "http://127.0.0.1:3000",
         historyApiFallback: true,
+        onListening: function(server) {
+            const ip = require('ip');
+            const port = server.listeningApp.address().port;
+            const opn = require('opn');
+            console.log(`Listening http://${ip.address()}:${port}`);
+            console.log(`Listening http://127.0.0.1:${port}`);
+
+            opn(`http://127.0.0.1:${port}`)
+        }
     },
     devtool: 'inline-source-map',
 });

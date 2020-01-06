@@ -7,7 +7,7 @@ import AppContainer from "./components/app/AppContainer";
 const path = require('path');
 const fs = require('fs');
 
-const PORT = process.env.PORT || 1992;
+const PORT = process.env.PORT || 8000;
 const app = express();
 
 app.use(express.static('dist/static'));
