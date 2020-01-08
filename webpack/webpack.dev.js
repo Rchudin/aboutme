@@ -48,7 +48,7 @@ module.exports = merge(baseConfig, {
         noInfo: true,
         // open: "http://127.0.0.1:3000",
         historyApiFallback: true,
-        onListening: function(server) {
+        onListening: (server) => {
             const ip = require('ip');
             const port = server.listeningApp.address().port;
             const opn = require('opn');

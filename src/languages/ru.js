@@ -16,7 +16,7 @@ const RUSSIAN_LANGUAGE = {
 
         //about
         "My name is Chudin Ruslan": "Меня зовут Руслан Чудин.",
-        "I am Go, JavaScript, Python developer": "Я Go, JS, Python разработчик. Работал с фреймворками и библиотеками, такими как React, Django, Qt. Имею базовые знания администрирования сервер на базе ОС Unix.",
+        "I am Go, JavaScript, Python developer": "Я Go, JS, Python разработчик. Работал с фреймворками и библиотеками, такими как React, Django, Qt. Имею базовые знания администрирования Unix сервер.",
 
 
     }
