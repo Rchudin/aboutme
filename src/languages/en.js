@@ -16,7 +16,7 @@ const ENGLISH_LANGUAGE = {
 
         //about
         "My name is Chudin Ruslan": "My name is Ruslan Chudin.",
-        "I am Go, JavaScript, Python developer": "I am Go, JavaScript, Python developer. Worked with frameworks and libraries such as React, Django, Qt. I have basic knowledge of administering a Unix server.",
+        "I am Go, JavaScript, Python developer": "I am Go, JavaScript, Python developer. Worked with frameworks and libraries such as React, Django, Qt. I have basic knowledge of Unix server administration.",
     }
 };
 
