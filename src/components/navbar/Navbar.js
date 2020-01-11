@@ -37,10 +37,10 @@ export default () => {
                     <div/>
                     <span>{t('about')}</span>
                 </NavLink>
-                <li className="navbar_li">
+                <a href="https://app.ruslanchudin.ru/" target="_blank" className="navbar_li">
                     <div/>
                     <span>{t('projects')}</span>
-                </li>
+                </a>
                 <NavLink to="/contacts" activeClassName="navbar_li_selected" className="navbar_li">
                     <div/>
                     <span>{t('contacts')}</span>
