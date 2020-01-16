@@ -1,0 +1,130 @@
+.content{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation{
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.navigation .link:first-child{
+    margin-top: 10px;
+}
+
+.navigation .link:last-child{
+    margin-bottom: 10px;
+}
+
+.link{
+    display: flex;
+    flex-direction: row;
+    margin: 2em -10px 2em 0;
+    padding: 0 10px;
+}
+
+.sophistication{
+    flex: 1 0 auto;
+    width: 2px;
+    margin: -2px 2px;
+}
+
+.link_point{
+    width: .7em;
+    height: auto;
+}
+
+.link_active{
+    opacity: .5;
+}
+
+.link_active .sophistication{
+    background: var(--color-second);
+}
+
+.bottom{
+    flex: 1 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.social{
+    flex: 1 0 auto;
+    display: flex;
+}
+
+.social .social_link:first-child{
+    margin-left: 0;
+}
+
+.social .social_link:last-child{
+    margin-right: 0;
+}
+
+.social_link{
+    display: flex;
+    margin: 0 .5em;
+}
+
+.social_icons{
+    width: 24px;
+    height: 24px;
+    z-index: -1;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+
+.top{
+    flex: 1 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.block_lng{
+    display: flex;
+    flex-direction: row;
+}
+
+.lng{
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+
+.deactivated{
+    display: flex;
+    align-items: flex-end;
+    font-size: 12px;
+    opacity: .5;
+    cursor: pointer;
+    padding-bottom: 1px;
+}
+
+.block_lng span{
+    flex: 1 0 auto;
+    width: 1px;
+    background: var(--color-second);
+    margin: 0 2px;
+}
+
+@media screen and (max-height: 400px) {
+    .link{
+        margin: 15px -10px 15px 0;
+    }
+}

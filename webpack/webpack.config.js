@@ -16,17 +16,17 @@ module.exports = {
                 }
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif|ico|txt)$/,
+                test: /\.(png|svg|jpg|gif|ico|txt)$/,
                 loader: 'file-loader',
                 options: {
-                    outputPath: 'media',
+                    outputPath: 'assets',
                 }
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
                 loader: 'file-loader',
                 options: {
-                    outputPath: 'media',
+                    outputPath: 'assets',
                 }
             },
         ]

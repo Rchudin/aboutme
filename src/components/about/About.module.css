@@ -1,11 +1,14 @@
-.about{
-    flex: 1 1 auto;
+.content{
+    flex: 1 0 auto;
     display: flex;
     flex-direction: column;
     padding-left: 33px;
 }
 
-.about_im{
+.stretch{
+    flex: 1 0 auto;
+}
+.me{
     color: var(--color-accent);
     font-style: normal;
     font-weight: 900;
@@ -15,8 +18,7 @@
     -moz-user-select: none;
     -webkit-user-select: none;
 }
-
-.about_txt{
+.txt{
     color: var(--color-accent);
     max-width: 23.5em;
     font-style: normal;
@@ -29,14 +31,15 @@
     -webkit-user-select: none;
 }
 
-@media screen and (max-width: 720px) {
-    .about_im {
-        font-size: 5vw;
-        margin-bottom: 1em;
-    }
 
-    .about_txt{
-        font-size: 4vw;
-    }
+/*@media screen and (max-width: 720px) {*/
+/*    .about_im {*/
+/*        font-size: 5vw;*/
+/*        margin-bottom: 1em;*/
+/*    }*/
 
-}
+/*    .about_txt{*/
+/*        font-size: 4vw;*/
+/*    }*/
+
+/*}*/

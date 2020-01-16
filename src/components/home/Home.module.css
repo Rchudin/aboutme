@@ -4,6 +4,11 @@
     align-items: flex-end;
 }
 
+.home_from{
+    display: flex;
+    flex-direction: column;
+}
+
 .home_from_1{
     font-weight: 500;
     font-size: 2rem;

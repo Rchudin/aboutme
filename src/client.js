@@ -3,10 +3,10 @@ import AppContainer from "./components/app/AppContainer";
 import ReactDOM from 'react-dom';
 import {BrowserRouter} from "react-router-dom";
 import "./languages/i18n";
-import './assets/color.css';
-import './assets/index.css';
+import './assets/css/color.css';
+import './assets/css/index.css';
 import './assets/fonts/Montserrat/stylesheet.css'
-import '@babel/polyfill';
+// import '@babel/polyfill';
 
 const Application = (
     <BrowserRouter>
@@ -20,6 +20,7 @@ if (process.env.SSR) {
         ReactDOM.hydrate(
             Application,
             document.getElementById('root'));
+        console.log("hi");
     } else {
         ReactDOM.render(
             Application,

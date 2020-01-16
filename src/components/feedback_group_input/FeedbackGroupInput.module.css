@@ -1,0 +1,66 @@
+.feedback_group_input {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 1.5rem;
+    color: var(--color-accent);
+    margin-bottom: 30px;
+
+}
+
+.feedback_group_input input{
+    flex: 0 0 auto;
+    font-size: 1rem;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: 8px 10px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--color-accent);
+    box-shadow: 0 1px 0 transparent;
+    -webkit-box-shadow: 0 1px 0 transparent;
+    -moz-box-shadow:    0 1px 0 transparent;
+    color: var(--color-accent);
+}
+.feedback_group_input input:focus{
+    outline: none;
+    border-bottom: 1px solid var(--color-accent);
+    box-shadow: 0 1px 0 var(--color-accent);
+    -webkit-box-shadow: 0 1px 0 var(--color-accent);
+    -moz-box-shadow:    0 1px 0 var(--color-accent);
+}
+
+.err_input input{
+    border-bottom: 1px solid var(--color-error);
+    box-shadow: 0 1px 0 var(--color-error);
+    -webkit-box-shadow: 0 1px 0 var(--color-error);
+    -moz-box-shadow:    0 1px 0 var(--color-error);
+}
+
+.feedback_group_input label {
+    position: absolute;
+    top: 0;
+    font-size: 1rem;
+    font-weight: 900;
+    margin-left: 3px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+}
+
+.feedback_group_input input:placeholder-shown + label {
+    opacity: 0;
+    transform: translateY(1rem);
+}
+
+
+
+/*.feedback_group_input input:valid {*/
+/*    border-color: var(--color-primary);*/
+/*    background-image: url("data:image/svg+xml,%3Csvg width='15px' height='15px' viewBox='0 0 45 34' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate%28-56.000000, -59.000000%29' fill='%232EEC96'%3E%3Cpolygon points='70.1468531 85.8671329 97.013986 59 100.58042 62.5664336 70.1468531 93 56 78.8531469 59.5664336 75.2867133'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");*/
+
+/*    background-position: right center;*/
+/*    background-repeat: no-repeat;*/
+/*}*/

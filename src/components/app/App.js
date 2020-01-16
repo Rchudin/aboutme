@@ -1,28 +1,40 @@
 import React from "react";
-import {renderRoutes} from "react-router-config";
-import  './App.css';
+import {NavLink, Route, Switch} from "react-router-dom";
+import s from './App.module.css';
 import Navbar from "../navbar/Navbar";
 import background from '../../assets/img/mads.png'
 import logo from "../../assets/img/RC.png"
-import Home from "../home/Home";
-import routes from "../../routes";
-import {NavLink, Route} from "react-router-dom";
+import routes from "../../utils/routes";
 
 
-export default () => {
+export default ({token}) => {
+
     return (
         <>
-            <div className="app">
-                <div className="app_wrapper">
+            <div className={s.app}>
+                <div className={s.content}>
                     <NavLink to="/" className="app_header">
-                        <img src={logo} alt="logo" />
+                        <img src={logo} alt="logo"/>
                     </NavLink>
-                    {renderRoutes(routes)}
+                    <Switch>
+                        {routes.map((route, i) => (
+                            <Route
+                                key={i}
+                                path={route.path}
+                                exact={route.exact}
+                                render={props =>
+                                    <route.component routes={route.routes} token={token}/>
+                                }
+                            />
+                        ))}
+                    </Switch>
                 </div>
-                <Navbar/>
+                <div className={s.navigation}>
+                    <Navbar/>
+                </div>
             </div>
-            <Route path='/' exact={true} >
-                <img src={background} alt="" className="app_img_background" />
+            <Route path='/' exact={true}>
+                <img src={background} alt="" className={s.app_img_background}/>
             </Route>
         </>
     )

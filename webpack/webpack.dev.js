@@ -3,6 +3,8 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const InterpolateHtmlPlugin = require('interpolate-html-plugin');
+const ip = require('ip');
+const opn = require('opn');
 const baseConfig = require('./webpack.config');
 
 const publicPath = '/';
@@ -21,8 +23,24 @@ module.exports = merge(baseConfig, {
         rules: [
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                exclude: /\.module\.css$/i,
+                use: ['style-loader', 'css-loader' ],
             },
+            {
+                test: /\.module\.css$/i,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                            },
+                        },
+                    },
+                ],
+            },
+
         ]
     },
     plugins: [
@@ -42,20 +60,27 @@ module.exports = merge(baseConfig, {
     ],
     devServer: {
         host: '0.0.0.0',
+        port: 3200,
         contentBase: './public',
         hot: true,
-        port: 3000,
-        noInfo: true,
-        // open: "http://127.0.0.1:3000",
         historyApiFallback: true,
         onListening: (server) => {
-            const ip = require('ip');
-            const port = server.listeningApp.address().port;
-            const opn = require('opn');
+            const {port} = server.listeningApp.address();
+
             console.log(`Listening http://${ip.address()}:${port}`);
             console.log(`Listening http://127.0.0.1:${port}`);
 
             opn(`http://127.0.0.1:${port}`)
+        },
+        proxy: {
+            "/api/ts/**": {
+                target: 'http://127.0.0.1:1990/',
+                secure: false,
+            },
+            // "/api/sparks/**": {
+            //     target: 'http://127.0.0.1:5000/',
+            //     secure: false,
+            // },
         }
     },
     devtool: 'inline-source-map',

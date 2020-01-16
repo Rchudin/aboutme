@@ -8,12 +8,19 @@ const ENGLISH_LANGUAGE = {
         "Moscow": "Moscow",
         "copied": "copied",
 
+        "contact me": "Contact me",
+        "Email":"Email",
+        "Username":"Username*",
+        "Phone number":"Phone number",
+        "Subject":"Subject*",
+        "Message":"Message",
+        "Send":"Send",
+        "Message sent successfully":"Message sent successfully",
 
         //contacts
         "get in touch": "get in touch",
         "let's build something": "let's build something",
-        "great together": "great together",
-
+        "great together":"great together",
         //about
         "My name is Chudin Ruslan": "My name is Ruslan Chudin.",
         "I am Go, JavaScript, Python developer": "I am Go, JavaScript, Python developer. Worked with frameworks and libraries such as React, Django, Qt. I have basic knowledge of Unix server administration.",

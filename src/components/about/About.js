@@ -1,20 +1,20 @@
 import React from "react";
 import {useTranslation} from "react-i18next";
-import './About.css'
+import s from './About.module.css'
 
 export default () => {
     const {t} = useTranslation();
 
     return (
-        <div className={"about"}>
-            <div className={"between_flex"}/>
-            <div className={"about_im"}>
+        <div className={s.content}>
+            <div className={s.stretch}/>
+            <div className={s.me}>
                 {t("My name is Chudin Ruslan")}
             </div>
-            <div className={"about_txt"}>
+            <div className={s.txt}>
                 {t("I am Go, JavaScript, Python developer")}
             </div>
-            <div className={"between_flex"}/>
+            <div className={s.stretch}/>
         </div>
     )
 }
