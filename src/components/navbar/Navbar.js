@@ -1,25 +1,19 @@
 import React, {useEffect} from "react";
 import {useTranslation} from "react-i18next";
 import {NavLink} from "react-router-dom";
-// import { useCookies } from 'react-cookie';
 import s from "./Navbar.module.css"
 import githubIcon from "../../assets/svg/github.svg"
 import facebookIcon from "../../assets/svg/facebook.svg"
 
 
 export default () => {
-    // const [cookies, setCookie, removeCookie] = useCookies(['language']);
-    // const [local_lng, setLng] = useState("en");
-
     useEffect(() => {
-
         const languageUsed = document.documentElement.lang;
         const lng = localStorage.getItem('language');
-        // if (languageUsed !== lng) {
-        //     document.querySelector('html').setAttribute('lang', lng);
-        // }
-        // i18n.changeLanguage(lng).then();
-        // setLng(lng)
+        if (languageUsed !== lng) {
+            document.querySelector('html').setAttribute('lang', lng);
+        }
+        i18n.changeLanguage(lng).then();
     }, []);
 
     const changeLanguage = () => {
@@ -32,10 +26,6 @@ export default () => {
 
         i18n.changeLanguage(lng).then();
         document.querySelector('html').setAttribute('lang', lng);
-        // const expires = new Date();
-        // expires.setDate(Date.now() + 1000 * 60 * 60 * 24 * 14);
-        // setCookie('language', lng, { path: '/' , expires,});
-        // setLng(lng)
     };
 
     const {t, i18n} = useTranslation();
