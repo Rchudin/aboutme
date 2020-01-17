@@ -1,5 +1,7 @@
 const ENGLISH_LANGUAGE = {
     translation: {
+        "lng":"en",
+
         "contacts":"contacts",
         "projects": "projects",
         "about":"about",

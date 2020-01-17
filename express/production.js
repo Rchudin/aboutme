@@ -9,7 +9,7 @@ const Stats = require(ClientStatsPath);
 app.use( express.static(path.join(__dirname, '../dist/static')));
 app.use(ServerRenderer(Stats));
 
-const PORT = process.env.PORT || 3200;
+const PORT = process.env.PORT || 8080;
 
 
 app.listen(PORT, error => {

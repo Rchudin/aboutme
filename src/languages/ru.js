@@ -1,5 +1,7 @@
 const RUSSIAN_LANGUAGE = {
     translation: {
+        "lng":"en",
+
         "contacts":"контакты",
         "projects": "проекты",
         "about":"обо мне",

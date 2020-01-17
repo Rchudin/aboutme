@@ -1,12 +1,23 @@
-import React from "react";
-import s from "./Navbar.module.css"
-import {FIcon, GitHubIcon, InIcon} from "../icons/icons";
+import React, {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {NavLink} from "react-router-dom";
+import s from "./Navbar.module.css"
 import githubIcon from "../../assets/svg/github.svg"
 import facebookIcon from "../../assets/svg/facebook.svg"
 
 export default () => {
+    const [local_lng, setLng] = useState("en");
+
+    useEffect(() => {
+        const languageUsed = document.documentElement.lang;
+        const lng = localStorage.getItem('language');
+        if (languageUsed !== lng) {
+            document.querySelector('html').setAttribute('lang', lng);
+        }
+        i18n.changeLanguage(lng).then();
+        setLng(lng)
+    }, []);
+
     const changeLanguage = () => {
         let lng = i18n.language;
         if (lng === "en") {
@@ -17,6 +28,7 @@ export default () => {
 
         i18n.changeLanguage(lng).then();
         document.querySelector('html').setAttribute('lang', lng);
+        setLng(lng)
     };
 
     const {t, i18n} = useTranslation();
@@ -40,7 +52,7 @@ export default () => {
                 <NavLink to="/about" className={s.link} activeClassName={s.link_active}>
                     <span className={s.sophistication}/>
                     {
-                        (i18n.language === "ru") ?
+                        (local_lng === "ru") ?
                             <svg className={s.link_point} width="12" height="78" viewBox="0 0 12 78" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -58,7 +70,7 @@ export default () => {
                 <a href="https://app.ruslanchudin.ru/" target="_blank" className={s.link}>
                     <span className={s.sophistication}/>
                     {
-                        (i18n.language === "ru") ?
+                        (local_lng === "ru") ?
                             <svg className={s.link_point} width="12" height="80" viewBox="0 0 12 80" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -77,7 +89,7 @@ export default () => {
                 <NavLink to="/contacts" className={s.link} activeClassName={s.link_active}>
                     <span className={s.sophistication}/>
                     {
-                        (i18n.language === "ru") ?
+                        (local_lng === "ru") ?
                             <svg className={s.link_point} width="12" height="92" viewBox="0 0 12 92" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path

@@ -10,11 +10,7 @@ class AppContainer extends React.Component {
     }
 
     componentDidMount = () => {
-        const languageUsed = document.documentElement.lang;
-        const lng = localStorage.getItem('language');
-        if (languageUsed !== lng) {
-            document.querySelector('html').setAttribute('lang', lng);
-        }
+
 
         axios.get(`/api/ts/account/`)
             .then(res => {
