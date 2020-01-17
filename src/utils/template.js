@@ -1,7 +1,7 @@
 
-export default ({ markup, assetsByChunkName}) => {
+export default ({ markup, assetsByChunkName, lng}) => {
     return `<!doctype html>
-<html lang="en">
+<html lang="${lng}">
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="/favicon.ico">

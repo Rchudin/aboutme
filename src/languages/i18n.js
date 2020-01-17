@@ -4,20 +4,28 @@ import {initReactI18next} from "react-i18next";
 import ENGLISH_LANGUAGE from "./en";
 import RUSSIAN_LANGUAGE from "./ru";
 
+
 export default i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
-        whitelist: ['en', 'ru'],
         // lng: "en",
+        whitelist: ['en', 'ru'],
         fallbackLng: "en",
-        resources: {
-            en: ENGLISH_LANGUAGE,
-            ru: RUSSIAN_LANGUAGE
-        },
         detection: {
-            order: ['localStorage'],
-            lookupLocalStorage: 'language',
+            order: ['cookie'],
+            lookupCookie: 'language',
+            cookieMinutes: 43200,
+            caches: ['cookie'],
             checkWhitelist: true,
-        }
+        },
+        resources: {
+            en: {
+                translation: ENGLISH_LANGUAGE
+            },
+            ru: {
+                translation: RUSSIAN_LANGUAGE
+            }
+        },
     });
+

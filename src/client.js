@@ -9,9 +9,11 @@ import './assets/fonts/Montserrat/stylesheet.css'
 // import '@babel/polyfill';
 
 const Application = (
+
     <BrowserRouter>
         <AppContainer/>
     </ BrowserRouter>
+
 );
 
 if (process.env.SSR) {
