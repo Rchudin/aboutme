@@ -7,7 +7,7 @@ import FeedbackGroupInput from "../feedback_group_input/FeedbackGroupInput";
 export default ({
                     feedback, handleInputChange, onChangeFileHandler, clearFile,
                     subject, username, email, phone, file, message,
-                    errUsername, errSubject, errMessage
+                    errUsername, errSubject, errMessage, errEmail
 
                 }) => {
     const {t} = useTranslation();
@@ -38,6 +38,7 @@ export default ({
                         <FeedbackGroupInput key={3}
                                             name={"email"}
                                             type={"email"}
+                                            isErr={errEmail}
                                             value={email}
                                             handleInputChange={handleInputChange}
                                             placeholder={t("Email")}/>

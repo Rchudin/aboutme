@@ -1,9 +1,11 @@
 import React from "react";
 import axios from "axios";
-import SendMessage from "./SendMessage";
-import s from  "./SendMessage.module.css"
 import {useTranslation} from "react-i18next";
 import {Redirect} from "react-router-dom";
+import SendMessage from "./SendMessage";
+import s from "./SendMessage.module.css"
+
+const pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
 
 class SendMessageContainer extends React.Component {
     constructor(props) {
@@ -18,6 +20,7 @@ class SendMessageContainer extends React.Component {
 
             errSubject: false,
             errUsername: false,
+            errEmail: false,
             errMessage: false,
         };
     }
@@ -26,44 +29,49 @@ class SendMessageContainer extends React.Component {
         this.props.setPage(2);
     }
 
-    handleInputChange =(event) =>  {
-
+    handleInputChange = (event) => {
         const target = event.target;
-
         const name = target.name;
-        const value = target.value;
+        let value = target.value;
+        let data = {};
 
-        if (name === "username" && this.state.errUsername){
-            this.setState({
-                errUsername: false,
-            });
-        }
+        switch (name) {
+            case "username":
+                value = value.length > 35 ? value.substring(0, 35) : value;
+                data.errUsername = this.state.errUsername && false;
+                break;
+            case "subject":
+                value = value.length > 100 ? value.substring(0, 97) + "..." : value;
+                data.errSubject = this.state.errSubject && false;
+                break;
+            case "message":
+                data.errMessage = value.length > 3000;
+                break;
+            case "phone":
+                value = value.length > 35 ? value.substring(0, 35) : value;
+                break;
+            case "email":
+                data.errEmail = value.length > 0 && !pattern.test(value);
+                break;
 
-        if (name === "subject" && this.state.errSubject){
-            this.setState({
-                errSubject: false,
-            });
         }
 
         this.setState({
+            ...data,
             [name]: value,
         });
 
-        if (name === "message" && value.length>3000){
-            this.setState({
-                errMessage: true,
-            });
-        }else{
-            this.setState({
-                errMessage: false,
-            });
-        }
     };
 
 
     onChangeFileHandler = event => {
         const file = event.target.files[0];
         const reader = new FileReader();
+        if (file.size > Math.pow(1024, 2) * 10) {
+            alert("File size is too large.");
+            return
+        }
+
         if (file) {
             reader.readAsDataURL(file);
         }
@@ -80,28 +88,26 @@ class SendMessageContainer extends React.Component {
 
     clearFile = () => {
         this.setState({
-            file : undefined,
+            file: undefined,
         });
     };
 
     feedback = () => {
-        if (this.state.subject.length < 1 || this.state.username.length < 1){
+        let data = {};
+        data.errEmail = this.state.email.length > 0 && !pattern.test(this.state.email);
 
-            if (this.state.subject.length < 1){
-                this.setState({
-                    errSubject: true,
-                });
-            }
-            if (this.state.username.length < 1){
-                this.setState({
-                    errUsername: true,
-                });
-            }
+        if (this.state.subject.length < 1 ||
+            this.state.username.length < 1 ||
+            this.state.message.length > 3000 ||
+            data.errEmail
+        ) {
+            data.errSubject = this.state.subject.length < 1;
+            data.errUsername = this.state.username.length < 1;
+            this.setState({
+                ...data,
+            });
+
             return
-        }
-
-        if(this.state.message.length> 3000){
-            return;
         }
 
 
@@ -133,16 +139,16 @@ class SendMessageContainer extends React.Component {
             });
 
         this.setState({
-            isSent : true,
+            isSent: true,
         });
 
 
     };
 
     render() {
-        if (this.props.token){
-            if (this.state.isSent){
-                return <SentMessage />
+        if (this.props.token) {
+            if (this.state.isSent) {
+                return <SentMessage/>
             }
 
             return <SendMessage feedback={this.feedback}
@@ -152,13 +158,17 @@ class SendMessageContainer extends React.Component {
                                 errUsername={this.state.errUsername}
                                 errMessage={this.state.errMessage}
                                 email={this.state.email}
+                                errEmail={this.state.errEmail}
                                 clearFile={this.clearFile}
                                 file={this.state.file}
                                 subject={this.state.subject}
                                 username={this.state.username}
                                 phone={this.state.phone}
                                 message={this.state.message}/>
-        }else{
+        } else {
+            if (this.props.isInit) {
+                return <Redirect to={"/contacts"}/>
+            }
             return <></>
         }
     }
@@ -167,7 +177,7 @@ class SendMessageContainer extends React.Component {
 export default SendMessageContainer
 
 
-const SentMessage =() => {
+const SentMessage = () => {
     const {t} = useTranslation();
     return (
         <div className={s.sent_message}>
@@ -175,3 +185,4 @@ const SentMessage =() => {
         </div>
     )
 };
+

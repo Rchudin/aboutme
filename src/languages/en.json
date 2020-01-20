@@ -1,7 +1,8 @@
 {
-    "lng": "en",
+
     "contacts": "contacts",
     "projects": "projects",
+    "file size is too large": "File size is too large.",
     "about": "about",
     "developer": "developer",
     "from": "from",
@@ -15,6 +16,7 @@
     "Message": "Message",
     "Send": "Send",
     "Message sent successfully": "Message sent successfully",
+
 
     "get in touch": "get in touch",
     "let's build something": "let's build something",

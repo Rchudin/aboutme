@@ -7,7 +7,7 @@ import logo from "../../assets/img/RC.png"
 import routes from "../../utils/routes";
 
 
-export default ({token}) => {
+export default ({token, isInit}) => {
 
     return (
         <>
@@ -23,7 +23,7 @@ export default ({token}) => {
                                 path={route.path}
                                 exact={route.exact}
                                 render={props =>
-                                    <route.component routes={route.routes} token={token}/>
+                                    <route.component routes={route.routes} token={token} isInit={isInit}/>
                                 }
                             />
                         ))}

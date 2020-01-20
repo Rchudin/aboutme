@@ -15,7 +15,10 @@ class AppContainer extends React.Component {
         axios.get(`/api/ts/account/`)
             .then(res => {
                 const {token} = res.data;
-                this.setState({token});
+                this.setState({
+                    token,
+                    isInit: true,
+                });
             })
             .catch(error => {
                 //console.log(error);
@@ -23,7 +26,7 @@ class AppContainer extends React.Component {
     };
 
     render() {
-        return <App token={this.state.token}/>
+        return <App token={this.state.token} isInit={this.state.isInit}/>
     }
 }
 
