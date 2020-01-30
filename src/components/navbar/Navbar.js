@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import {useTranslation} from "react-i18next";
 import {NavLink} from "react-router-dom";
+import Cookies from 'js-cookie';
 import s from "./Navbar.module.css"
 import githubIcon from "../../assets/svg/github.svg"
 import facebookIcon from "../../assets/svg/facebook.svg"
@@ -9,11 +10,12 @@ import facebookIcon from "../../assets/svg/facebook.svg"
 export default () => {
     useEffect(() => {
         const languageUsed = document.documentElement.lang;
-        const lng = localStorage.getItem('language');
-        if (languageUsed !== lng) {
+        const lng = Cookies.get('language');
+        if (languageUsed !== lng && (lng === "en" || lng === "ru")) {
             document.querySelector('html').setAttribute('lang', lng);
+            // i18n.changeLanguage(lng).then();
         }
-        i18n.changeLanguage(lng).then();
+
     }, []);
 
     const changeLanguage = () => {
@@ -37,7 +39,7 @@ export default () => {
                     <div className={`${s.lng} ${s.deactivated}`} onClick={changeLanguage}>
                         {(i18n.language === "ru") ? "en" : "ru"}
                     </div>
-                    <span />
+                    <span/>
                     <div className={s.lng}>
                         {i18n.language}
                     </div>
@@ -106,7 +108,7 @@ export default () => {
 
             <div className={s.bottom}>
                 <div className={s.social}>
-                    <a className={s.social_link}  target="_blank" href="https://www.facebook.com/ruslan.chudin">
+                    <a className={s.social_link} target="_blank" href="https://www.facebook.com/ruslan.chudin">
                         <object className={s.social_icons} type="image/svg+xml" data={facebookIcon}>
                             <img alt="Facebook" src={facebookIcon}/>
                         </object>
