@@ -46,7 +46,7 @@ app.use(
 
 app.use(ServerRenderer(Stats));
 
-const PORT = process.env.PORT || 3100;
+const PORT = process.env.PORT || 8080;
 
 
 app.listen(PORT, error => {
