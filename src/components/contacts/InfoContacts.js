@@ -5,7 +5,7 @@ import {useTranslation} from "react-i18next";
 import {NavLink} from "react-router-dom";
 
 
-const email = "rus.chudin@gmail.com";
+const email = "me@ruslanchudin.ru";
 const telegram = "t.me/rchudin";
 
 
