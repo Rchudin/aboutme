@@ -16,7 +16,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(png|svg|jpg|gif|ico|txt)$/,
+                test: /\.(png|svg|jpg|gif|ico|txt|webp)$/,
                 loader: 'file-loader',
                 options: {
                     outputPath: 'assets',

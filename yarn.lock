@@ -5788,6 +5788,11 @@ react-router@5.1.2:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
+react-webp-image@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/react-webp-image/-/react-webp-image-1.0.7.tgz#2851c198627200c31516be946607bae4cf4a69c9"
+  integrity sha512-XtxTnhfrcm2IwuCMe7dRC/sn/oXSCezSJ2wl9JD8viPdZpPygCWIWvAVQvx0DiWt4H7qQK7VPJFmH+seddh6bw==
+
 react@^16.12.0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
