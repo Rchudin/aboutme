@@ -66,7 +66,8 @@ export default () => {
                             </svg>
                     }
                 </NavLink>
-                <a href="https://books.ruslanchudin.com/" target="_blank" className={s.link}>
+                <NavLink to="/projects" className={s.link} activeClassName={s.link_active}>
+                {/* <a href="https://books.ruslanchudin.com/" target="_blank" className={s.link}> */}
                     <span className={s.sophistication}/>
                     {
                         (i18n.language === "ru") ?
@@ -83,7 +84,7 @@ export default () => {
                                     fill="white"/>
                             </svg>
                     }
-                </a>
+                </NavLink>
 
                 <NavLink to="/contacts" className={s.link} activeClassName={s.link_active}>
                     <span className={s.sophistication}/>

@@ -1,5 +1,6 @@
 import React from "react";
 import {Redirect} from "react-router-dom";
+import Unitandzero from "../components/unit_and_zero/Unitandzero"
 import Home from "../components/home/Home";
 import Contacts from "../components/contacts/Contacts";
 import About from "../components/about/About";
@@ -15,6 +16,11 @@ export default [
     {
         component: About,
         path: '/about',
+        exact: true
+    },
+    {
+        component: Unitandzero,
+        path: '/projects',
         exact: true
     },
     {
