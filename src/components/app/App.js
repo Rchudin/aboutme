@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Route, Switch } from "react-router-dom";git
+import { NavLink, Route, Switch } from "react-router-dom";
 import s from './App.module.css';
 import Navbar from "../navbar/Navbar";
 import backgroundImg from '../../assets/img/mads.png'
@@ -36,7 +36,7 @@ export default ({ token, isInit }) => {
             </div>
             <Route path='/' exact={true}>
                 <picture>
-                    <source srcset={backgroundWebp} type="image/webp" className={s.app_img_background} />
+                    <source srcSet={backgroundWebp} type="image/webp" className={s.app_img_background} />
                     <img src={backgroundImg} alt="logo" className={s.app_img_background} />
                 </picture>
                 {/* <img src={backgroundWebp} alt="" className={s.app_img_background}/> */}
