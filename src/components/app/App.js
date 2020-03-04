@@ -14,9 +14,11 @@ export default ({ token, isInit }) => {
         <>
             <div className={s.app}>
                 <div className={s.content}>
-                    <NavLink to="/" className="app_header">
-                        <img src={logo} alt="logo" />
-                    </NavLink>
+                    <div className={s.header}>
+                        <NavLink to="/" >
+                            <img src={logo} alt="logo" />
+                        </NavLink>
+                    </div>
                     <Switch>
                         {routes.map((route, i) => (
                             <Route
@@ -37,7 +39,7 @@ export default ({ token, isInit }) => {
             <Route path='/' exact={true}>
                 <picture>
                     <source srcSet={backgroundWebp} type="image/webp" className={s.app_img_background} />
-                    <img src={backgroundImg} alt="logo" className={s.app_img_background} />
+                    <img src={backgroundImg} alt="" className={s.app_img_background} />
                 </picture>
                 {/* <img src={backgroundWebp} alt="" className={s.app_img_background}/> */}
             </Route>

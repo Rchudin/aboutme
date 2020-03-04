@@ -18,6 +18,10 @@
     flex-direction: column;
 }
 
+.header{
+    display: flex;
+    flex-direction: row;
+}
 
 .app_img_background{
     position: absolute;
