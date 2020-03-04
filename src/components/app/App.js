@@ -36,8 +36,11 @@ export default ({ token, isInit }) => {
                 </div>
             </div>
             <Route path='/' exact={true}>
-                <Img src={backgroundImg} webp={backgroundWebp} className={s.app_img_background} alt="" />;
-              {/* <img src={backgroundWebp} alt="" className={s.app_img_background}/> */}
+                <picture>
+                    <source srcset={backgroundWebp} type="image/webp" className={s.app_img_background} />
+                    <img src={backgroundImg} alt="logo" className={s.app_img_background} />
+                </picture>
+                {/* <img src={backgroundWebp} alt="" className={s.app_img_background}/> */}
             </Route>
         </>
     )

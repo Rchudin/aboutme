@@ -22,9 +22,13 @@
 .app_img_background{
     position: absolute;
     width: 100vw;
-    height: 110vh;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     object-fit: cover;
-    z-index: -5;
+    z-index: -10;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
@@ -42,8 +46,3 @@
 /*        margin: 6vh 7vw 3vh 7vh;*/
 /*    }*/
 /*}*/
-
-
-
-
-

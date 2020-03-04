@@ -24,9 +24,10 @@
 	position: relative;
 	width: auto;
 	height: 75%;
-	margin: 0 auto;
-	top: 50%;
-	transform: translateY(-50%);
+    margin: 0 auto;
+    margin-top: 5vh;
+	/* top: 50%;
+	transform: translateY(-50%); */
 }
 
 .hover {
