@@ -1,6 +1,5 @@
 import React from "react";
-import { NavLink, Route, Switch } from "react-router-dom";
-import Img from "react-webp-image";
+import { NavLink, Route, Switch } from "react-router-dom";git
 import s from './App.module.css';
 import Navbar from "../navbar/Navbar";
 import backgroundImg from '../../assets/img/mads.png'
