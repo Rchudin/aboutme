@@ -12,7 +12,7 @@ class AppContainer extends React.Component {
     componentDidMount = () => {
 
 
-        axios.get(`/api/ts/account/`)
+        axios.get(`/api/sw/account/`)
             .then(res => {
                 const {token} = res.data;
                 this.setState({

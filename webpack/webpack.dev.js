@@ -73,8 +73,8 @@ module.exports = merge(baseConfig, {
             opn(`http://127.0.0.1:${port}`)
         },
         proxy: {
-            "/api/ts/**": {
-                target: 'http://127.0.0.1:1990/',
+            "/api/sw/**": {
+                target: 'http://127.0.0.1:7898/',
                 secure: false,
             },
             // "/api/sparks/**": {

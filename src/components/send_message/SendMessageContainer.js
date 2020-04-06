@@ -122,7 +122,7 @@ class SendMessageContainer extends React.Component {
         body.append('file', this.state.file);
 
         axios({
-            url: '/api/ts/feedback/',
+            url: '/api/sw/feedback/',
             method: 'POST',
             data: body,
             headers: {
@@ -185,4 +185,3 @@ const SentMessage = () => {
         </div>
     )
 };
-

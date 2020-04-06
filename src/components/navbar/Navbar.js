@@ -4,7 +4,8 @@ import {NavLink} from "react-router-dom";
 import Cookies from 'js-cookie';
 import s from "./Navbar.module.css"
 import githubIcon from "../../assets/svg/github.svg"
-import facebookIcon from "../../assets/svg/facebook.svg"
+// import facebookIcon from "../../assets/svg/facebook.svg"
+import linkedinIcon from "../../assets/svg/linkedin.svg"
 
 
 export default () => {
@@ -109,11 +110,16 @@ export default () => {
 
             <div className={s.bottom}>
                 <div className={s.social}>
-                    <a className={s.social_link} target="_blank" href="https://www.facebook.com/ruslan.chudin">
+                <a className={s.social_link} target="_blank" href="https://www.linkedin.com/in/rchudin/">
+                        <object className={s.social_icons} type="image/svg+xml" data={linkedinIcon}>
+                            <img alt="LinkedIn" src={linkedinIcon}/>
+                        </object>
+                    </a>
+                    {/* <a className={s.social_link} target="_blank" href="https://www.facebook.com/ruslan.chudin">
                         <object className={s.social_icons} type="image/svg+xml" data={facebookIcon}>
                             <img alt="Facebook" src={facebookIcon}/>
                         </object>
-                    </a>
+                    </a> */}
 
                     <a className={s.social_link} target="_blank" href="https://github.com/Rchudin">
 
