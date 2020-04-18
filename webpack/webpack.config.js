@@ -1,19 +1,19 @@
 module.exports = {
     target: "web",
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js']
+    },
     module: {
         rules: [
             {
-                test: /\.js?$/,
+                test: /\.tsx?$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: [
-                            '@babel/preset-react',
-                            ['@babel/env', { targets: { browsers: ['last 7 versions'] } }]
-                        ]
-                    }
-                }
+                loader: "ts-loader"
+            },
+            {
+                test: /\.js$/,
+                use: ["source-map-loader"],
+                enforce: "pre"
             },
             {
                 test: /\.(png|svg|jpg|gif|ico|txt|webp)$/,
@@ -29,6 +29,6 @@ module.exports = {
                     outputPath: 'assets',
                 }
             },
-        ]
-    }
+        ],
+    },
 };

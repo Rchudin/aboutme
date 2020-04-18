@@ -19,7 +19,8 @@ const publicPath = '/';
 
 module.exports = [
     merge(baseConfig, prodConfig, {
-        entry: './src/client.js',
+        mode: 'production',
+        entry: './src/client.tsx',
         output: {
             filename: 'js/[name].[hash].bundle.js',
             chunkFilename: 'js/[name].[hash].chunk.js',
@@ -41,9 +42,9 @@ module.exports = [
                     assets: true
                 }
             }),
-            new CopyPlugin([
-                {from: './public', to: '', ignore: ['*.html']}
-            ]),
+            // new CopyPlugin([
+            //     {from: './public', to: '', ignore: ['*.html']}
+            // ]),
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin(
                 {
@@ -54,14 +55,14 @@ module.exports = [
         ],
     }),
     merge(baseConfig, prodConfig, {
+        mode: 'production',
         target: 'node',
-        entry: './src/server.js',
+        entry: './src/server.tsx',
         externals: [webpackNodeExternals()],
         output: {
             filename: 'server.js',
             libraryTarget: 'commonjs2',
-            path: path.resolve(__dirname, '../dist'),
-            publicPath
+            path: path.resolve(__dirname, '../dist')
         },
         plugins: [
             new webpack.DefinePlugin({

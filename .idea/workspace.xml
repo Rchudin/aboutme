@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="84b9f4f0-a664-4296-b52d-3ce19cda5040" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/custom.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/app/App.module.css.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/app/AppContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/app/AppDesktop.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/app/AppMobile.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/languages/i18n.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/appActions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/billboardsActions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/appReducer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/billboardsReducer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/store.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/template.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/production.js" beforeDir="false" afterPath="$PROJECT_DIR$/express/production.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/color.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/color.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Montserrat/demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/2.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Black.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Black.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-BlackItalic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-BlackItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-BoldItalic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-BoldItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-LightItalic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-LightItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Medium.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Medium.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-MediumItalic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-MediumItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-RegularItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Thin.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-Thin.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-ThinItalic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/Roboto-ThinItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/svg/about.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/svg/about_ru.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/svg/arrow_down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/svg/attach_file-24px.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/svg/contacts.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/svg/contacts_ru.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/svg/facebook.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/svg/github.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/svg/insert_drive_file-24px.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/svg/keyboard_arrow_down-24px.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/svg/linkedin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/svg/projects.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/svg/projects_ru.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about/About.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about/About.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/AppContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contacts/Contacts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contacts/Contacts.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contacts/InfoContacts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/feedback_group_input/FeedbackGroupInput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/feedback_group_input/FeedbackGroupInput.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/Home.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/icons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/send_message/SendMessage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/send_message/SendMessage.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/send_message/SendMessageContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/unit_and_zero/Unitandzero.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/unit_and_zero/Unitandzero.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/languages/i18n.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/template.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/webpack.build.spa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/webpack.build.ssr.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack/webpack.build.ssr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/webpack.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack/webpack.dev.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/webpack.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack/webpack.prod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1aiXOUz01hjUGh4qswGtzMMtaX1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/store/actions" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="C:\Users\rusla\Documents\Projects\JS\aboutme\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rusla\Documents\Projects\JS\aboutme\src\assets\public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rusla\Documents\Projects\JS\aboutme\src\store\actions" />
+      <recent name="C:\Users\rusla\Documents\Projects\JS\aboutme\src\store" />
+      <recent name="C:\Users\rusla\Documents\Projects\JS\aboutme\src\assets" />
+      <recent name="C:\Users\rusla\Documents\Projects\JS\aboutme\src\components" />
+      <recent name="C:\Users\rusla\Documents\Projects\JS\aboutme\src\assets\fonts" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="84b9f4f0-a664-4296-b52d-3ce19cda5040" name="Default Changelist" comment="" />
+      <created>1587219355974</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587219355974</updated>
+      <workItem from="1587219358596" duration="2693000" />
+      <workItem from="1587222250045" duration="12899000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587236847400">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587236847400" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1587235786084">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587235786084" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1587235786083">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587235786083" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1587235786083">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587235786083" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1587235786084">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587235786084" />
+  </component>
+</project>

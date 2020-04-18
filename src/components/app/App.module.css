@@ -1,39 +1,6 @@
-.app{
+.content{
     flex: 1 0 auto;
     display: flex;
-    flex-direction: row;
-    margin: 3rem 3rem;
-}
-
-.content{
-    flex: 1 1 auto;
-    display: flex;
     flex-direction: column;
 
 }
-
-.navigation{
-    flex: 0 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.header{
-    display: flex;
-    flex-direction: row;
-}
-
-
-
-@media screen and (max-width: 720px) {
-    .app{
-        margin: 2rem 0.8rem;
-    }
-
-}
-
-/*@media screen and (max-height: 600px) {*/
-/*    .app{*/
-/*        margin: 6vh 7vw 3vh 7vh;*/
-/*    }*/
-/*}*/

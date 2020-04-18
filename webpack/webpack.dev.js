@@ -1,24 +1,25 @@
 const path = require('path');
 const webpack = require('webpack');
-const merge = require('webpack-merge');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const InterpolateHtmlPlugin = require('interpolate-html-plugin');
 const ip = require('ip');
 const opn = require('opn');
+const merge = require('webpack-merge');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+// const InterpolateHtmlPlugin = require('interpolate-html-plugin');
 const baseConfig = require('./webpack.config');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const publicPath = '/';
 const publicUrl = '';
 
 module.exports = merge(baseConfig, {
     mode: 'development',
-    entry: './src/client.js',
+    entry: './src/client.tsx',
     output: {
         filename: 'js/[name].[hash].bundle.js',
-        chunkFilename: 'js/[name].[hash].chunk.js',
-        path: path.resolve(__dirname, '../public'),
-        publicPath
+        path: path.resolve(__dirname, '../dist'),
+        chunkFilename: 'js/[name].[hash].chunk.js'
     },
+    devtool: 'inline-source-map',
     module: {
         rules: [
             {
@@ -45,23 +46,27 @@ module.exports = merge(baseConfig, {
     },
     plugins: [
         new HtmlWebPackPlugin({
-            template: './public/index.html',
-            filename: 'index.html'
-        }),
-        new InterpolateHtmlPlugin({
-            'PUBLIC_URL': publicUrl
+            template: './src/assets/public/index.html',
+            filename: 'index.html',
+            favicon: './src/assets/public/favicon.ico'
         }),
         new webpack.DefinePlugin({
             'process.env': {
                 NODE_ENV: JSON.stringify('development'),
             }
         }),
+        // new CopyPlugin([
+        //     {from: './public', to: '', ignore: ['*.html']}
+        // ]),
+        // new InterpolateHtmlPlugin({
+        //     // 'PUBLIC_URL': publicUrl
+        // }),
         new webpack.HotModuleReplacementPlugin(),
     ],
     devServer: {
         host: '0.0.0.0',
-        port: 3200,
-        contentBase: './public',
+        port: 3100,
+        contentBase: './dist',
         hot: true,
         historyApiFallback: true,
         onListening: (server) => {
@@ -70,18 +75,17 @@ module.exports = merge(baseConfig, {
             console.log(`Listening http://${ip.address()}:${port}`);
             console.log(`Listening http://127.0.0.1:${port}`);
 
-            opn(`http://127.0.0.1:${port}`)
+            // opn(`http://127.0.0.1:${port}`)
         },
-        proxy: {
-            "/api/sw/**": {
-                target: 'http://127.0.0.1:7898/',
-                secure: false,
-            },
-            // "/api/sparks/**": {
-            //     target: 'http://127.0.0.1:5000/',
-            //     secure: false,
-            // },
-        }
+        // proxy: {
+        //     "/api/ts/**": {
+        //         target: 'http://127.0.0.1:1990/',
+        //         secure: false,
+        //     },
+        //     "/api/sparks/**": {
+        //         target: 'http://127.0.0.1:5000/',
+        //         secure: false,
+        //     },
+        // }
     },
-    devtool: 'inline-source-map',
 });
