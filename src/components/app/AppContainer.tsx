@@ -5,6 +5,7 @@ import AppMobile from './AppMobile'
 import AppDesktop from './AppDesktop'
 import {RootState} from "../../store/store";
 import {setIsMobile} from "../../store/actions/appActions";
+import {mobileSize} from "../../utils/constants";
 
 const mapState = (state: RootState) => {
     return {
@@ -34,13 +35,10 @@ class AppContainer extends React.Component<Props, State> {
         super(props);
     }
 
+    handleWindowSizeChange  = debounce(()=> {this.props.setIsMobile(window.innerWidth <= mobileSize)}, 200);
+
     componentDidMount(): void {
-
-    }
-
-    handleWindowSizeChange  = debounce(()=> {this.props.setIsMobile(window.innerWidth < 500)}, 200);
-
-    componentWillMount(): void {
+        this.props.setIsMobile(window.innerWidth < mobileSize);
         window.addEventListener('resize', this.handleWindowSizeChange);
     }
 
@@ -50,7 +48,8 @@ class AppContainer extends React.Component<Props, State> {
 
     render() {
         return (
-           this.props ? <AppMobile /> : <AppDesktop />
+           // this.props.isMobile ? <AppMobile /> : <AppDesktop />
+            <AppDesktop />
         )
     }
 }

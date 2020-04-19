@@ -1,12 +1,12 @@
 import * as React from "react";
 import * as s from './App.module.css';
 
-export interface AppMobile {
+export interface AppMobileProps {
 }
 
-export default (props: AppMobile) => {
+export default (props: AppMobileProps) => {
     return (
-        <div>
+        <div className={s.content} >
 
         </div>
     )

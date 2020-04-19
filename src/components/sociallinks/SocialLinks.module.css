@@ -1,0 +1,29 @@
+.content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.social > :last-child{
+    margin: 0;
+}
+
+.link{
+    margin: 0 .8rem 0 0;
+}
+
+.link img{
+    height: 1.5rem;
+    width: auto;
+
+}
+

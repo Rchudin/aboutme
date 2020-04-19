@@ -1,12 +1,17 @@
 {
 
+    "developer": "developer",
+    "from": "from",
+    "Moscow": "Moscow",
+
+
     "contacts": "contacts",
     "projects": "projects",
     "file size is too large": "File size is too large.",
     "about": "about",
-    "developer": "developer",
-    "from": "from",
-    "Moscow": "Moscow",
+
+
+
     "copied": "copied",
     "contact me": "Contact me",
     "Email": "Email",

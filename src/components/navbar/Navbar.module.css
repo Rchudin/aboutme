@@ -1,0 +1,36 @@
+.content {
+    display: flex;
+    flex-direction: column;
+}
+.content > :first-child {
+    margin: 0 0 2.3rem 0;
+}
+
+.content > :last-child{
+    margin: 2.3rem 0 0 0;
+}
+
+.link{
+    display: flex;
+    flex-direction: row;
+    margin:  2.3rem 0;
+}
+
+.link_active{
+    opacity: .5;
+}
+
+.sophistication{
+    flex: 1 0 auto;
+    /*width: 2px;*/
+    /*margin: -2px 2px;*/
+}
+
+.link_active .sophistication{
+    background: var(--color-second);
+}
+
+.link_point{
+    width: .7rem;
+    height: auto;
+}

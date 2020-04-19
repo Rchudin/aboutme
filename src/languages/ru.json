@@ -1,12 +1,17 @@
 {
+    "developer": "разработчик",
+    "from": "из",
+    "Moscow": "Москвы",
+
+
     "lng": "en",
     "contacts": "контакты",
     "projects": "проекты",
     "about": "обо мне",
-    "developer": "разработчик",
+
     "file size is too large": "Размер файла слишком велик.",
-    "from": "из",
-    "Moscow": "Москвы",
+
+
     "copied": "скопировано",
     "contact me": "Свяжитесь со мной",
     "Email": "Электронная почта",

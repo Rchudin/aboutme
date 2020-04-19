@@ -1,0 +1,33 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+.lng{
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.deactivated{
+    display: flex;
+    align-items: flex-end;
+    font-size: .85rem;
+    opacity: .5;
+
+    padding-bottom: 1px;
+}
+
+.content span{
+    flex: 1 0 auto;
+    width: 1px;
+    background: var(--color-second);
+    margin: 0 2px;
+}
