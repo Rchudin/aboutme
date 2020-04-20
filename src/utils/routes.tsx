@@ -1,6 +1,8 @@
 import React from "react";
 import {Redirect} from "react-router-dom";
 import Home from "../components/home/HomeContainer";
+import Unitandzero from "../components/other/unitandzero/Unitandzero";
+import About from "../components/about/About";
 
 // import Unitandzero from "../components/unit_and_zero/Unitandzero"
 // import Home from "../components/home/Home";
@@ -23,16 +25,16 @@ const routesList: routeType[] = [
         exact: true,
         routes: undefined
     },
-    // {
-    //     component: About,
-    //     path: '/about',
-    //     exact: true
-    // },
-    // {
-    //     component: Unitandzero,
-    //     path: '/projects',
-    //     exact: true
-    // },
+    {
+        component: About,
+        path: '/about',
+        exact: true
+    },
+    {
+        component: Unitandzero,
+        path: '/projects',
+        exact: true
+    },
     // {
     //     component: Contacts,
     //     path: '/contacts',

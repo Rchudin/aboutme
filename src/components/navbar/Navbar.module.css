@@ -1,6 +1,7 @@
 .content {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
 }
 .content > :first-child {
     margin: 0 0 2.3rem 0;
@@ -22,8 +23,8 @@
 
 .sophistication{
     flex: 1 0 auto;
-    /*width: 2px;*/
-    /*margin: -2px 2px;*/
+    width: 2px;
+    margin: -2px 2px;
 }
 
 .link_active .sophistication{

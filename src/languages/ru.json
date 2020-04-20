@@ -3,32 +3,10 @@
     "from": "из",
     "Moscow": "Москвы",
 
+    "My name is Ruslan Chudin": "Меня зовут Руслан Чудин.",
+    "I am": "Я Go, C++ разработчик. Имею опыт работы с игровым движком  Unreal Engine 4, a также с такими фреймворками и библиотеками, как React, Django и Qt. Обладаю знаниями администрирования Unix сервера."
 
-    "lng": "en",
-    "contacts": "контакты",
-    "projects": "проекты",
-    "about": "обо мне",
-
-    "file size is too large": "Размер файла слишком велик.",
-
-
-    "copied": "скопировано",
-    "contact me": "Свяжитесь со мной",
-    "Email": "Электронная почта",
-    "Username": "Имя*",
-    "Phone number": "Номер телефона",
-    "Subject": "Тема*",
-    "Message": "Сообщение",
-    "Send": "Отправить",
-    "Message sent successfully": "Сообщение успешно отправлено",
-    "get in touch": "контакты для связи",
-    "let's build something": "построим что-то великое",
-    "great together": "вместе",
-    "My name is Chudin Ruslan": "Меня зовут Руслан Чудин.",
-    "I am Go, JavaScript, Python developer": "Я Go, JS, Python разработчик. Работал с фреймворками и библиотеками, такими как React, Django, Qt. Имею базовые знания администрирования Unix сервера."
 }
-
-
 
 
 
