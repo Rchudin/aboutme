@@ -1,0 +1,78 @@
+.content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    max-width: 45em;
+}
+
+.header{
+    margin-left: 0.25em;
+}
+
+.text{
+    margin-top: 0.5em;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.3em;
+    line-height: 1em;
+    text-transform: lowercase;
+}
+
+.block_links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.link {
+    color: var(--color-accent);
+    font-style: normal;
+    font-weight: 500;
+    font-size: .9em;
+    text-transform: lowercase;
+    cursor: pointer;
+    margin-top: 0.5em;
+}
+
+
+.pagination {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex: 0 0 1.5rem;
+}
+.pagination a, svg{
+    width: 16px;
+    height: 16px;
+    padding: 0;
+}
+
+.pagination svg {
+    fill: var(--color-accent);
+    /*transform: rotate(-90deg);*/
+}
+
+.tooltip {
+    position: absolute;
+    margin-left: 9px;
+    color: var(--color-accent);
+    z-index: 10;
+    opacity: .5;
+}

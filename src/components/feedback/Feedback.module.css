@@ -1,0 +1,25 @@
+.content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.inputs{
+    display: flex;
+    flex-direction: row;
+}
+
+.double{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 2vw 0 2vw;
+}
+
+@media only screen and (max-width: 765px) {
+    .inputs{
+        flex-direction: column;
+    }
+    .double{
+        margin: 0 1vw;
+    }
+}

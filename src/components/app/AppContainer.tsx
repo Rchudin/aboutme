@@ -4,7 +4,7 @@ import debounce from "lodash/debounce"
 import AppMobile from './AppMobile'
 import AppDesktop from './AppDesktop'
 import {RootState} from "../../store/store";
-import {setIsMobile} from "../../store/actions/appActions";
+import {initialization, setIsMobile} from "../../store/actions/appActions";
 import {mobileSize} from "../../utils/constants";
 
 const mapState = (state: RootState) => {
@@ -14,7 +14,8 @@ const mapState = (state: RootState) => {
 };
 
 const mapDispatch = {
-    setIsMobile
+    setIsMobile,
+    initialization
 };
 
 const connector = connect(
@@ -24,7 +25,9 @@ const connector = connect(
 
 type PropsFromRedux = ConnectedProps<typeof connector>
 
-type Props = PropsFromRedux & {}
+type Props = PropsFromRedux & {
+
+}
 
 interface State {
 
@@ -38,6 +41,7 @@ class AppContainer extends React.Component<Props, State> {
     handleWindowSizeChange  = debounce(()=> {this.props.setIsMobile(window.innerWidth <= mobileSize)}, 200);
 
     componentDidMount(): void {
+        this.props.initialization()
         this.props.setIsMobile(window.innerWidth < mobileSize);
         window.addEventListener('resize', this.handleWindowSizeChange);
     }

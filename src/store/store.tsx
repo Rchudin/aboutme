@@ -1,23 +1,13 @@
 import {applyMiddleware, combineReducers, createStore, compose} from "redux";
 import thunk from 'redux-thunk';
 import appReducer from "./reducers/appReducer";
-// import billboardsReducer from "./reducers/billboardsReducer";
-// import {reducer as formReducer} from "redux-form";
-// import appReducer from "./reducers/appReducer";
-//
-// import userReducer from "./reducers/userReducer";
-// import noteReducer from "./reducers/noteReducer";
-
-
+import { reducer as formReducer } from 'redux-form'
 
 
 
 const RootState  = {
-    // form: formReducer,
+    form: formReducer,
     app: appReducer,
-    // billboards: billboardsReducer,
-    // user:userReducer,
-    // notesPage:noteReducer,
 };
 
 

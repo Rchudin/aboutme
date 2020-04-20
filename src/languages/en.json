@@ -5,6 +5,16 @@
     "Moscow": "Moscow",
 
     "My name is Ruslan Chudin": "My name is Ruslan Chudin.",
-    "I am": "I am a Go, C ++ developer. I have experience with the Unreal Engine 4 game engine, as well as with such frameworks and libraries as React, Django and Qt. I have basic knowledge of Unix server administration."
+    "I am": "I am a Go, C ++ developer. I have experience with the Unreal Engine 4 game engine, as well as with such frameworks and libraries as React, Django and Qt. I have basic knowledge of Unix server administration.",
+
+    "get in touch": "get in touch",
+    "let's build something great together": "let's build something great together",
+
+    "copied": "copied",
+
+    "Subject": "Subject*",
+    "Email": "Email",
+    "Username": "Username*",
+    "Phone number": "Phone number"
 }
 

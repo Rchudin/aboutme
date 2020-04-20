@@ -17,7 +17,8 @@ module.exports = merge(baseConfig, {
     output: {
         filename: 'js/[name].[hash].bundle.js',
         path: path.resolve(__dirname, '../dist'),
-        chunkFilename: 'js/[name].[hash].chunk.js'
+        chunkFilename: 'js/[name].[hash].chunk.js',
+        publicPath: publicPath
     },
     devtool: 'inline-source-map',
     module: {
@@ -77,15 +78,15 @@ module.exports = merge(baseConfig, {
 
             // opn(`http://127.0.0.1:${port}`)
         },
-        // proxy: {
-        //     "/api/ts/**": {
-        //         target: 'http://127.0.0.1:1990/',
-        //         secure: false,
-        //     },
-        //     "/api/sparks/**": {
-        //         target: 'http://127.0.0.1:5000/',
-        //         secure: false,
-        //     },
-        // }
+        proxy: {
+            "/api/sw/**": {
+                target: 'http://127.0.0.1:7898/',
+                secure: false,
+            },
+            // "/api/sparks/**": {
+            //     target: 'http://127.0.0.1:5000/',
+            //     secure: false,
+            // },
+        }
     },
 });

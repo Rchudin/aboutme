@@ -1,0 +1,26 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.85rem;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.numbering {
+    display: flex;
+    color: var(--color-accent);
+    align-items: flex-end;
+    font-weight: 500;
+}
+
+.numbering_deactivated {
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.content span {
+    width: 1px;
+    background: var(--color-second);
+    margin: 0 3px;
+}

@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: row;
     cursor: pointer;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 .lng{
     font-style: normal;
@@ -11,9 +14,6 @@
     font-weight: 600;
     margin: 0;
     padding: 0;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
 }
 
 .deactivated{

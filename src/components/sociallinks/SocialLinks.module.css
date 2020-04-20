@@ -2,6 +2,9 @@
     flex: 1 0 auto;
     display: flex;
     flex-direction: row;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 .content > :last-child{

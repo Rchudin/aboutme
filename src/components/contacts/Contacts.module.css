@@ -1,0 +1,15 @@
+.content{
+    flex: 1 1 auto;
+    flex-direction: row;
+    display: flex;
+}
+
+.content > :first-child{
+    width: 2rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+
+
