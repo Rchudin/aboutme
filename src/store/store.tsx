@@ -2,12 +2,14 @@ import {applyMiddleware, combineReducers, createStore, compose} from "redux";
 import thunk from 'redux-thunk';
 import appReducer from "./reducers/appReducer";
 import { reducer as formReducer } from 'redux-form'
+import feedbackReducer from "./reducers/feedbackReducer";
 
 
 
 const RootState  = {
     form: formReducer,
     app: appReducer,
+    feedback: feedbackReducer,
 };
 
 

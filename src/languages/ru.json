@@ -23,7 +23,10 @@
     "field is required": "это поле не может быть пустым",
     "not a valid email address": "недействительный адрес эл. почты",
 
-    "Send": "Отправить"
+    "Send": "Отправить",
+    "Message sent successfully": "Сообщение успешно отправлено",
+
+    "file size is too large": "Размер файла слишком велик."
 }
 
 

@@ -24,6 +24,9 @@
     "field is required": "field is required",
     "not a valid email address": "not a valid email address",
 
-    "Send": "Send"
+    "Send": "Send",
+    "Message sent successfully": "Message sent successfully",
+
+    "file size is too large": "File size is too large."
 }
 

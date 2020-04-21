@@ -5,16 +5,17 @@ import * as s from './Feedback.module.css';
 import {emailOmitemptyValidation, maxLengthCreator, required} from "../../utils/validators";
 import {FeedbackInput} from "../other/feedback_Input/FeedbackInput";
 import {FeedbackTextarea} from "../other/feedback_textarea/FeedbackTextarea";
+import LdsRoller from "../other/lds_roller/LdsRoller";
 
 const maxLength3000 = maxLengthCreator(3000);
 
 interface FormProps {
     file: string | undefined
-    onChangeFileHandler: (e:any) => void
+    onChangeFileHandler: (e: any) => void
     clearFile: () => void
 }
 
-const Form = (props: FormProps &  InjectedFormProps<{}>) => {
+const Form = (props: FormProps & InjectedFormProps<{}>) => {
     const {t} = useTranslation();
     return (
         <form className={s.content} onSubmit={props.handleSubmit}>
@@ -58,8 +59,11 @@ const Form = (props: FormProps &  InjectedFormProps<{}>) => {
                        validate={[maxLength3000]}/>
             </div>
             <div className={s.send_frame}>
-                <button className={s.send} onClick={props.handleSubmit}>
-                    {t("Send")}
+                <button className={!props.submitting? s.send : s.sending} onClick={props.handleSubmit}>
+                   <span>{t("Send")}</span>
+                    {props.submitting&&<div className={s.roller}>
+                        <LdsRoller />
+                    </div>}
                 </button>
                 <div className={s.file_frame}>
                     {

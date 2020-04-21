@@ -6,5 +6,8 @@ export const letter: string;
 export const letter_header: string;
 export const send_frame: string;
 export const send: string;
+export const sending: string;
 export const file_frame: string;
 export const file_close: string;
+export const roller: string;
+export const sent_message: string;

@@ -1,22 +1,27 @@
 import * as React from "react";
 import {connect, ConnectedProps} from "react-redux";
 import {Redirect} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 import Feedback from "./Feedback";
 import {RootState} from "../../store/store";
 import {useEffect, useState} from "react";
 import {setPage} from "../../store/actions/appActions";
-import {feedback} from "../../store/actions/feedbackActions";
+import {feedback, setSent} from "../../store/actions/feedbackActions";
+import * as s from './Feedback.module.css';
+import {log} from "util";
 
 const mapState = (state: RootState) => {
     return {
         isInitialized: state.app.isInitialized,
         token: state.app.token,
+        sent: state.feedback.sent,
     }
 };
 
 const mapDispatch = {
     setPage,
-    feedback
+    feedback,
+    setSent,
 };
 
 const connector = connect(
@@ -35,8 +40,10 @@ interface State {
 }
 
 const FeedbackContainer = (props: Props, state: State) => {
+    const {t} = useTranslation();
     useEffect(() => {
         props.setPage(2)
+        props.setSent(undefined);
     }, []);
 
     const [file, setFile] = useState(undefined);
@@ -47,8 +54,11 @@ const FeedbackContainer = (props: Props, state: State) => {
     const onChangeFileHandler = (event: any) => {
         const upload_file = event.target.files[0];
         const reader = new FileReader();
+
         if (upload_file.size > Math.pow(1024, 2) * 10) {
-            alert("File size is too large.");
+            alert(t("file size is too large"));
+            console.log(t("file size is too large"));
+            event.target.value = null;
             return
         }
 
@@ -78,6 +88,13 @@ const FeedbackContainer = (props: Props, state: State) => {
     };
 
     if (props.token) {
+        if(props.sent && props.sent === "ok"){
+            return (
+                <div className={s.sent_message}>
+                    <label>{t("Message sent successfully")}</label>
+                </div>
+            )
+        }
         return <Feedback onSubmit={onSubmit}
                          file={file}
                          clearFile={clearFile}
@@ -90,6 +107,5 @@ const FeedbackContainer = (props: Props, state: State) => {
     }
 }
 export default connector(FeedbackContainer)
-
 
 

@@ -42,9 +42,9 @@ module.exports = [
                     assets: true
                 }
             }),
-            // new CopyPlugin([
-            //     {from: './public', to: '', ignore: ['*.html']}
-            // ]),
+            new CopyPlugin([
+                {from: './src/assets/public', to: '', ignore: ['*.html']}
+            ]),
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin(
                 {
