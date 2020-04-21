@@ -46,7 +46,6 @@ const CommunicationContainer = (props: Props) => {
     const onClickTelegram = () => {
         setCopyTelegram(true);
         setTimeout(() => setCopyTelegram(false), 800);
-        alert(ts)
     };
 
     const wheel = (e: any): void => {

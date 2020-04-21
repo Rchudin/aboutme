@@ -51,6 +51,11 @@
     font-size: 0.8rem;
     margin: 0.3em 0.8em;
     font-weight: 500;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .count_err{
