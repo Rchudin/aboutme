@@ -10,7 +10,7 @@ const feedbackURL = "/contacts/feedback"
 
 const mapState = (state: RootState) => {
     return {
-        isInitialized: state.app.isInitialized
+        token: state.app.token
     }
 };
 
@@ -25,15 +25,10 @@ const connector = connect(
 
 type PropsFromRedux = ConnectedProps<typeof connector>
 
-type Props = PropsFromRedux & {
+type Props = PropsFromRedux & {}
 
-}
 
-interface State {
-
-}
-
-const CommunicationContainer = (props: Props, state: State) => {
+const CommunicationContainer = (props: Props) => {
     useEffect(() => {
         props.setPage(1)
     }, []);
@@ -41,6 +36,7 @@ const CommunicationContainer = (props: Props, state: State) => {
     const history = useHistory();
     const [copyEmail, setCopyEmail] = useState(false);
     const [copyTelegram, setCopyTelegram] = useState(false);
+    const [ts, setTs] = useState(0);
 
     const onClickEmail = () => {
         setCopyEmail(true);
@@ -50,26 +46,46 @@ const CommunicationContainer = (props: Props, state: State) => {
     const onClickTelegram = () => {
         setCopyTelegram(true);
         setTimeout(() => setCopyTelegram(false), 800);
+        alert(ts)
     };
 
-    const wheel = (e: any) :void=> {
-        console.log(e)
-        const delta = e.deltaY || e.detail || e.wheelDelta;
-        if (delta > 0){
-            history.push(feedbackURL);
+    const wheel = (e: any): void => {
+        if (props.token) {
+            const delta = e.deltaY || e.detail || e.wheelDelta;
+            if (delta > 0) {
+                history.push(feedbackURL);
+            }
         }
     }
 
+    const touchstart = (e: any): void => {
+        if (props.token) {
+            setTs(e.touches[0].clientY);
+        }
+    }
+
+    const touchend = (e: any): void => {
+        if (props.token) {
+            const te = e.changedTouches[0].clientY;
+            if (ts > te+5) {
+                history.push(feedbackURL);
+            }
+            //  else if(ts < te-5){
+            //     history.push(feedbackURL);
+            // }
+        }
+
+    }
     return <Communication copyEmail={copyEmail}
                           copyTelegram={copyTelegram}
                           feedbackURL={feedbackURL}
                           onClickEmail={onClickEmail}
                           onClickTelegram={onClickTelegram}
-                          isInitialized={props.isInitialized}
-                          wheel={wheel}/>
+                          token={props.token}
+                          wheel={wheel}
+                          touchstart={touchstart}
+                          touchend={touchend}/>
 }
-
-
 
 
 export default connector(CommunicationContainer)

@@ -2,24 +2,154 @@
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
+    /**/
+    margin-right: 1rem;
+    /**/
 }
 .inputs{
+    flex: 0 0 auto;
     display: flex;
     flex-direction: row;
+    margin: 1vh 1vw;
 }
+
+.inputs > :first-child{
+    margin-right: 1.5vw;
+}
+
+.inputs > :last-child{
+    margin-left: 1.5vw;
+}
+
 
 .double{
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-    margin: 2vh 2vw 0 2vw;
+    /*margin: 2vh 2vw 0 2vw;*/
+}
+
+.header{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 2rem;
+}
+.header p {
+    margin: 0;
+}
+
+.letter{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.letter_header{
+    display: flex;
+    align-items: flex-start;
+    color: var(--color-accent);
+    font-weight: 700;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 0.5em;
+    font-size: 0.9rem;
+}
+
+.send_frame{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+}
+
+.send{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 7rem;
+    height: 2rem;
+    margin: 0;
+    border-radius: 0.3rem;
+    color: var(--color-accent);
+    cursor: pointer;
+    border: 0.05rem solid var(--color-accent);
+}
+
+
+.file_frame{
+    flex: 0 0 auto;
+    display: flex;
+    margin-left: 0.4rem;
+    margin-bottom: 0.1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.file_frame input[type=file]{
+    flex: 0 0 auto;
+    display: none;
+}
+
+.file_frame label{
+    flex: 1 0 auto;
+    display: flex;
+    margin: 0;
+}
+
+.file_frame label svg{
+    flex: 1 0 auto;
+    fill: var(--color-accent);
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.file_close{
+    flex: 0 0 auto;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.file_close  svg{
+    fill: var(--color-accent);
+    height: 100%;
+    width: 100%;
+}
+
+.file_close svg path{
+    fill: none;
+}
+
+.file_close svg path:first-child{
+    fill: var(--color-accent);
+}
+
+.file_close:hover svg path:last-child{
+    fill: var(--color-accent);
 }
 
 @media only screen and (max-width: 765px) {
     .inputs{
         flex-direction: column;
     }
-    .double{
-        margin: 0 1vw;
+    .inputs > :first-child{
+        margin-right: 0;
+    }
+    .inputs > :last-child{
+        margin-left: 0;
     }
 }

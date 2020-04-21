@@ -6,7 +6,7 @@ import {routeType} from "../../utils/routes";
 
 export interface ContactsProps {
     page: number
-    isInitialized: boolean
+    token: string | undefined
     routes: routeType[]
 }
 
@@ -15,7 +15,7 @@ export default (props: ContactsProps) => {
     return (
         <div className={s.content}>
             <div>
-                {props.isInitialized && <PageIndicatorDouble page={props.page}/>}
+                {props.token && <PageIndicatorDouble page={props.page}/>}
             </div>
             <Switch>
                 {props.routes.map((route: routeType, i: number) => (

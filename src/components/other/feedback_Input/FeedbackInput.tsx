@@ -10,19 +10,9 @@ export const FeedbackInput = ({input, meta, placeholder, ...props}:any) => {
 
     return (
         <div className={`${s.content} ${errToggle ? s.error: ""}`}>
-            <input id={id} placeholder={placeholder} {...input} {...props}/>
-            <label htmlFor={id}>{placeholder}</label>
-            <span className={ errToggle ? s.error_span : ""}>{t(meta.error)}</span>
+            <input  id={id} placeholder={placeholder} {...input} {...props}/>
+            <label className={s.header} htmlFor={id}>{placeholder}</label>
+            <div className={ !errToggle ? s.message : s.message_error}>{t(meta.error)}</div>
         </div>
-
-        // <div className={s.container}>
-        //     <input className={ errToggle ?  s.invalid_input : s.input_login}  {...input} {...props}/>
-        //     <span className={ errToggle ? s.error_span : s.error_span_invalid}>{t(meta.error)}</span>
-        // </div>
-
-    // <div className={`${s.feedback_group_input} ${isErr ? s.err_input: ""}`}>
-    //     <input name={name} value={value} onChange={(e) => handleInputChange(e)} type={type} id={id} placeholder={placeholder}/>
-    //     <label htmlFor={id}>{placeholder}</label>
-    // </div>
     )
 };

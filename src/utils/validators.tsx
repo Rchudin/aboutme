@@ -11,10 +11,10 @@ export const  required = (value: string) : string | undefined =>  {
 //     return field_is_required;
 // };
 
-// export const minLengthCreator = (minLength) => (value) => {
-//     if (value.length >= minLength) return undefined;
-//     return `min length is ${minLength} symbols`;
-// };
+export const maxLengthCreator = (maxLength:number) => (value: string): string | undefined  => {
+    if (!value || value.length <=  maxLength) return undefined;
+    return `max length is ${maxLength} symbols`;
+};
 
 export const  emailValidation = (value: string) : string | undefined => {
     const emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);

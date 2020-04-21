@@ -11,12 +11,19 @@
 
     "copied": "скопировано",
 
+    "contact me": "Свяжитесь со мной",
+
     "Subject": "Тема*",
     "Email": "Электронная почта",
     "Username": "Имя*",
-    "Phone number": "Номер телефона"
+    "Phone number": "Номер телефона",
 
+    "Message": "Сообщение",
 
+    "field is required": "это поле не может быть пустым",
+    "not a valid email address": "недействительный адрес эл. почты",
+
+    "Send": "Отправить"
 }
 
 

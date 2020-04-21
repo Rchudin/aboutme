@@ -12,9 +12,18 @@
 
     "copied": "copied",
 
+    "contact me": "Contact me",
+
     "Subject": "Subject*",
     "Email": "Email",
     "Username": "Username*",
-    "Phone number": "Phone number"
+    "Phone number": "Phone number",
+
+    "Message": "Message",
+
+    "field is required": "field is required",
+    "not a valid email address": "not a valid email address",
+
+    "Send": "Send"
 }
 
