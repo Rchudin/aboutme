@@ -25,7 +25,7 @@ module.exports = [
             filename: 'js/[name].[hash].bundle.js',
             chunkFilename: 'js/[name].[hash].chunk.js',
             path: path.resolve(__dirname, '../dist/static'),
-            publicPath
+            publicPath: publicPath
         },
         plugins: [
             new webpack.DefinePlugin({
@@ -62,7 +62,8 @@ module.exports = [
         output: {
             filename: 'server.js',
             libraryTarget: 'commonjs2',
-            path: path.resolve(__dirname, '../dist')
+            path: path.resolve(__dirname, '../dist'),
+            publicPath: publicPath
         },
         plugins: [
             new webpack.DefinePlugin({

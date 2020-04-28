@@ -8,7 +8,7 @@ export const baseAPI = {
     },
     feedback(body:FormData, token:string) {
         return axios({
-            url: '/api/sw/feedback/',
+            url: `${baseURL}feedback/`,
             method: 'POST',
             data: body,
             headers: {
