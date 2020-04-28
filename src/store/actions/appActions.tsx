@@ -1,6 +1,7 @@
 import {AppActionTypes, SET_IS_INITIALIZED, SET_IS_MOBILE, SET_PAGE, SET_TOKEN} from "../reducers/appReducer";
 import {Dispatch} from "redux";
 import axios from "axios";
+import {baseAPI} from "../../api/api";
 
 
 export const setIsMobile = (isMobile: boolean): AppActionTypes => {
@@ -32,7 +33,7 @@ export const setPage= (page: number | undefined): AppActionTypes => {
 };
 
 export const initialization = () => async (dispatch: Dispatch): Promise<void> => {
-    return  axios.get(`/api/sw/account/`)
+    return  baseAPI.initialization()
         .then(res => {
             const {token} = res.data;
             dispatch(setToken(token));
