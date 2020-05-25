@@ -35,7 +35,8 @@ export const setPage= (page: number | undefined): AppActionTypes => {
 export const initialization = () => async (dispatch: Dispatch): Promise<void> => {
     return  baseAPI.initialization()
         .then(res => {
-            const {token} = res.data;
+            // const {token} = res.data;
+            const token = "token";
             dispatch(setToken(token));
         })
         .catch(error => {

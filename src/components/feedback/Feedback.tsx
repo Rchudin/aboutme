@@ -93,19 +93,8 @@ const Form = (props: FormProps & InjectedFormProps<{}>) => {
                     }
                 </div>
             </div>
-
-            {/*<div className={styles.submit}>*/}
-            {/*    <button type="submit">*/}
-            {/*        {!submitting ?*/}
-            {/*            t('Join'):*/}
-            {/*            <LdsRoller />*/}
-            {/*        }*/}
-            {/*    </button>*/}
-            {/*</div>*/}
-
         </form>
     )
 };
 
 export default reduxForm<{}, FormProps>({form: 'feedback'})(Form);
-

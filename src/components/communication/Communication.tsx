@@ -40,7 +40,7 @@ export default (props: CommunicationProps) => {
                         }
                     </div>
                 </CopyToClipboard>
-                <CopyToClipboard text={telegram}>
+                {/* <CopyToClipboard text={telegram}>
                     <div className={s.link} onClick={props.onClickTelegram}>
                         {telegram}
                         {
@@ -54,7 +54,7 @@ export default (props: CommunicationProps) => {
                 </CopyToClipboard>
                 <a target="_blank" href={telegramURL}>
                     <div className={s.link}>telegram</div>
-                </a>
+                </a> */}
                 <a target="_blank" href={linkedInUrl}>
                     <div className={s.link}>linkedin</div>
                 </a>
