@@ -1,5 +1,6 @@
 import React from "react";
-import {Redirect} from "react-router-dom";
+import { Redirect } from "react-router-dom";
+import {withTitle} from "./withTitle"
 import HomeContainer from "../components/home/HomeContainer";
 import Unitandzero from "../components/other/unitandzero/Unitandzero";
 import About from "../components/about/About";
@@ -7,8 +8,17 @@ import ContactsContainer from "../components/contacts/ContactsContainer";
 import FeedbackContainer from "../components/feedback/FeedbackContainer";
 import CommunicationContainer from "../components/communication/CommunicationContainer";
 
+export const HomeURL: string = "/"
+export const AboutURL: string = "/about"
+export const WorkURL: string = "/work"
+export const ContactsURL: string = "/contacts"
+export const FeedbackURL: string = "/contacts/feedback"
 
 
+const HomeComponent = withTitle({ Component: HomeContainer, title: 'Home' });
+const AboutComponent = withTitle({ Component: About, title: 'About' });
+const ContactsComponent = withTitle({ Component: ContactsContainer, title: 'Contacts' });
+const WorksComponent = withTitle({ Component: Unitandzero, title: 'Works' });
 
 export type routeType = {
     component: any
@@ -19,49 +29,48 @@ export type routeType = {
 
 const routesList: routeType[] = [
     {
-        component: HomeContainer,
-        path: '/',
+        component: HomeComponent,
+        path: HomeURL,
         exact: true,
         routes: undefined
     },
     {
-        component: About,
-        path: '/about',
+        component: AboutComponent,
+        path: AboutURL,
         exact: true
     },
     {
-        component: Unitandzero,
-        path: '/projects',
+        component: WorksComponent,
+        path: WorkURL,
         exact: true
     },
     {
-        component: ContactsContainer,
-        path: '/contacts',
+        component: ContactsComponent,
+        path: ContactsURL,
         exact: false,
         routes: [
             {
                 component: CommunicationContainer,
-                path: '/contacts',
+                path: ContactsURL,
                 exact: true,
             },
             {
                 component: FeedbackContainer,
-                path: '/contacts/feedback',
+                path: FeedbackURL,
                 exact: true,
             },
             {
                 component: () => {
-                    return <Redirect to='/contacts'/>
+                    return <Redirect to={ContactsURL} />
                 }
             }
         ]
     },
     {
         component: () => {
-            return <Redirect to='/'/>
+            return <Redirect to={HomeURL} />
         }
     }
 ]
 
-
-export  default routesList
+export default routesList

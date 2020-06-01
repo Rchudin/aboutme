@@ -1,26 +1,24 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {Provider} from 'react-redux'
-import {BrowserRouter} from "react-router-dom";
+import { Provider } from 'react-redux'
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
 import store from "./store/store";
 import AppContainer from "./components/app/AppContainer"
 import './assets/css/index.css';
 import './assets/css/color.css';
 import './assets/fonts/Montserrat/stylesheet.css'
 import "./languages/i18n";
-// import './assets/css/flex.css';
-// import './assets/css/grid.css';
-
-// import AppContainer from "./components/app/AppContainer";
-// import '@babel/polyfill';
 
 
 const Application = (
-    <BrowserRouter>
+    <HelmetProvider>
         <Provider store={store}>
-            <AppContainer  />
+            <BrowserRouter>
+                <AppContainer />
+            </BrowserRouter>
         </Provider>
-    </ BrowserRouter>
+    </HelmetProvider >
 );
 
 
@@ -43,8 +41,3 @@ if (process.env.SSR) {
         Application,
         document.getElementById('main'));
 }
-
-
-
-
-
