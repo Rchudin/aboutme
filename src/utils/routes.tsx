@@ -18,7 +18,7 @@ export const FeedbackURL: string = "/contacts/feedback"
 const HomeComponent = withTitle({ Component: HomeContainer, title: 'Home' });
 const AboutComponent = withTitle({ Component: About, title: 'About' });
 const ContactsComponent = withTitle({ Component: ContactsContainer, title: 'Contacts' });
-const WorksComponent = withTitle({ Component: Unitandzero, title: 'Works' });
+const WorksComponent = withTitle({ Component: Unitandzero, title: 'Work' });
 
 export type routeType = {
     component: any
