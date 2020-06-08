@@ -1,14 +1,14 @@
 import axios, {AxiosResponse} from "axios";
 
-const baseURL:string = "/api/sw/"
+const baseURL:string = "/api/"
 
 export const baseAPI = {
     initialization() {
-        return axios.get(`${baseURL}feedback/`)
+        return axios.get(`${baseURL}feedback`)
     },
     feedback(body:FormData, token:string) {
         return axios({
-            url: `${baseURL}feedback/`,
+            url: `${baseURL}feedback`,
             method: 'POST',
             data: body,
             headers: {
