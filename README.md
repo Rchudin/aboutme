@@ -1,7 +1,5 @@
 # React Server Side Rendering
 
-------
-
 Basic implementation of server-side rendering for a React application.
 
 ## Getting started 
@@ -13,4 +11,3 @@ Run dev mode: `yarn dev`
 Build app: `yarn build:ssr`
 
 Start Express server: `yarn start`
-
