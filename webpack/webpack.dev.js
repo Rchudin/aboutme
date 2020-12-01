@@ -76,17 +76,13 @@ module.exports = merge(baseConfig, {
             console.log(`Listening http://${ip.address()}:${port}`);
             console.log(`Listening http://127.0.0.1:${port}`);
 
-            // opn(`http://127.0.0.1:${port}`)
+            opn(`http://127.0.0.1:${port}`)
         },
         proxy: {
-            "/api/sw/**": {
-                target: 'http://127.0.0.1:7898/',
+            "/api/feedback": {
+                target: 'http://127.0.0.1:3911/',
                 secure: false,
             },
-            // "/api/sparks/**": {
-            //     target: 'http://127.0.0.1:5000/',
-            //     secure: false,
-            // },
         }
     },
 });

@@ -28,6 +28,7 @@ module.exports = [
             publicPath: publicPath
         },
         plugins: [
+            new CleanWebpackPlugin(),
             new webpack.DefinePlugin({
                 'process.env': {
                     NODE_ENV: JSON.stringify('production'),
@@ -35,6 +36,12 @@ module.exports = [
                 }
             }),
             new CompressionPlugin(),
+            new MiniCssExtractPlugin(
+                {
+                    filename: 'css/[name].[hash].css',
+                    chunkFilename: 'css/[name].[hash].css',
+                }
+            ),
             new StatsWriterPlugin({
                 filename: '../stats.json',
                 stats: {
@@ -45,13 +52,6 @@ module.exports = [
             new CopyPlugin([
                 {from: './src/assets/public', to: '', ignore: ['*.html']}
             ]),
-            new CleanWebpackPlugin(),
-            new MiniCssExtractPlugin(
-                {
-                    filename: 'css/[name].[hash].css',
-                    chunkFilename: 'css/[name].[hash].css',
-                }
-            )
         ],
     }),
     merge(baseConfig, prodConfig, {
@@ -66,6 +66,7 @@ module.exports = [
             publicPath: publicPath
         },
         plugins: [
+            new CleanWebpackPlugin(),
             new webpack.DefinePlugin({
                 'process.env': {
                     NODE_ENV: JSON.stringify('production'),
@@ -73,6 +74,7 @@ module.exports = [
                     SERVER: JSON.stringify(true)
                 }
             }),
+            new CompressionPlugin(),
             new MiniCssExtractPlugin(
                 {
                     filename: 'css/[name].[hash].css',
