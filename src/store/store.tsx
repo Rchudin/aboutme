@@ -1,15 +1,17 @@
-import {applyMiddleware, combineReducers, createStore, compose} from "redux";
+import { applyMiddleware, combineReducers, createStore, compose } from "redux";
 import thunk from 'redux-thunk';
 import appReducer from "./reducers/appReducer";
 import { reducer as formReducer } from 'redux-form'
 import feedbackReducer from "./reducers/feedbackReducer";
+import workReducer from "./reducers/workReducer";
 
 
 
-const RootState  = {
+const RootState = {
     form: formReducer,
     app: appReducer,
     feedback: feedbackReducer,
+    work: workReducer,
 };
 
 
@@ -27,7 +29,7 @@ declare global {
 const middleware = [thunk];
 
 
-const composeEnhancers = (process.env.NODE_ENV !== 'production' && typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__)|| compose;
+const composeEnhancers = (process.env.NODE_ENV !== 'production' && typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
 
 
@@ -46,4 +48,3 @@ export default createStore(
     state,
     composeEnhancers(applyMiddleware(...middleware))
 );
-

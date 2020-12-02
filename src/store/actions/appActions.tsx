@@ -1,6 +1,5 @@
 import {AppActionTypes, SET_IS_INITIALIZED, SET_IS_MOBILE, SET_PAGE, SET_TOKEN} from "../reducers/appReducer";
 import {Dispatch} from "redux";
-import axios from "axios";
 import {baseAPI} from "../../api/api";
 
 
