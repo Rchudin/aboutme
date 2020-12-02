@@ -1,15 +1,18 @@
 import * as React from "react";
 import { Helmet } from 'react-helmet-async';
+import {useTranslation} from "react-i18next";
 
 export interface HelmetComponentProps {
     title: string
 }
 
 export default (props: HelmetComponentProps) => {
-    var defaultTitle: string = 'Ruslan Chudin';
+    const {t} = useTranslation();
+
+    const defaultTitle: string = 'Ruslan Chudin';
     return (
         <Helmet>
-            <title>{props.title ? props.title : defaultTitle}</title>
+            <title>{props.title ? t(props.title) : defaultTitle}</title>
 
             {/*
             <meta name="viewport" content="width=device-width,initial-scale=1" />
