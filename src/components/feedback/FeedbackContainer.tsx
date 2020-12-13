@@ -55,7 +55,7 @@ const FeedbackContainer = (props: Props, state: State) => {
         const upload_file = event.target.files[0];
         const reader = new FileReader();
 
-        if (upload_file.size > Math.pow(1024, 2) * 10) {
+        if (upload_file.size > Math.pow(1024, 2) * 3) {
             alert(t("file size is too large"));
             console.log(t("file size is too large"));
             event.target.value = null;
@@ -107,5 +107,3 @@ const FeedbackContainer = (props: Props, state: State) => {
     }
 }
 export default connector(FeedbackContainer)
-
-
