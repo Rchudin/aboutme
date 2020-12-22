@@ -1,4 +1,5 @@
 export const SET_LIST_WORK = "work/SET_LIST_WORK";
+export const SET_LANGUAGES = "work/SET_LANGUAGES";
 
 export type Work = {
     name: string,
@@ -9,10 +10,12 @@ export type Work = {
 }
 
 export type WorkInitializingStateType = {
-    listWork: Work[] | undefined
+    listWork: Work[] | undefined,
+    languages: string[],
 }
 const InitializingState: WorkInitializingStateType = {
     listWork: undefined,
+    languages: [],
 }
 
 export default (state: WorkInitializingStateType = InitializingState, action: WorkActionTypes): WorkInitializingStateType => {
@@ -22,15 +25,25 @@ export default (state: WorkInitializingStateType = InitializingState, action: Wo
                 ...state,
                 listWork: action.listWork,
             };
+        case SET_LANGUAGES:
+            return {
+                ...state,
+                languages: action.languages,
+            };
         default:
             return state;
     }
 };
 
 export type WorkActionTypes =
-    SetListWork
+    SetListWork | SetLanguages
 
 interface SetListWork {
     type: typeof SET_LIST_WORK
     listWork: Work[]
+}
+
+interface SetLanguages {
+    type: typeof SET_LANGUAGES
+    languages: string[]
 }

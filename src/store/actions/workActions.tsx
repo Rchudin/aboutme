@@ -1,11 +1,18 @@
 import { Dispatch } from "redux";
 import { baseAPI } from "../../api/api";
-import { SET_LIST_WORK, WorkActionTypes, Work } from "../reducers/workReducer";
+import { SET_LIST_WORK, SET_LANGUAGES, WorkActionTypes, Work } from "../reducers/workReducer";
 
 export const setListWork = (listWork: Work[]): WorkActionTypes => {
     return {
         type: SET_LIST_WORK,
         listWork
+    }
+};
+
+export const setLanguages = (languages: string[]): WorkActionTypes => {
+    return {
+        type: SET_LANGUAGES,
+        languages
     }
 };
 
@@ -28,6 +35,8 @@ export const fetchListWork = () => async (dispatch: Dispatch): Promise<void> => 
 
     Promise.all([github]).then(
         () => {
+            let work: Work[] = [];
+            work = work.concat(githubRepositories);
             // work.sort((a: Work, b: Work) => {
             //     let nameA = a.name.toUpperCase();
             //     let nameB = b.name.toUpperCase();
@@ -39,7 +48,16 @@ export const fetchListWork = () => async (dispatch: Dispatch): Promise<void> => 
             //     }
             //     return 0;
             // });
-            dispatch(setListWork([].concat(githubRepositories)));
+
+            dispatch(setListWork(work));
+
+            let languages: string[] = ["C++", "Rust"];
+            for (let x of work) {
+                if (!languages.includes(x.language)) {
+                    languages.push(x.language);
+                }
+            }
+            dispatch(setLanguages(languages));
         }
     )
 };

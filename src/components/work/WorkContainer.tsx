@@ -13,6 +13,7 @@ import { WorkURL } from '../../utils/routes';
 const mapState = (state: RootState) => {
     return {
         listWork: state.work.listWork,
+        programLang: state.work.languages,
     }
 };
 
@@ -55,7 +56,7 @@ const ContactsContainer = (props: Props, state: State) => {
                     path={WorkURL}
                     exact={true}
                     render={() =>
-                        <ListWork listWork={props.listWork} />
+                        <ListWork listWork={props.listWork} programLang={props.programLang} />
                     }
                 />
                 <Redirect to={WorkURL} />
