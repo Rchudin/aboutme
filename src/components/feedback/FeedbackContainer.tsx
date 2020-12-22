@@ -1,14 +1,14 @@
 import * as React from "react";
-import {connect, ConnectedProps} from "react-redux";
-import {Redirect} from "react-router-dom";
-import {useTranslation} from "react-i18next";
+import { connect, ConnectedProps } from "react-redux";
+import { Redirect } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Feedback from "./Feedback";
-import {RootState} from "../../store/store";
-import {useEffect, useState} from "react";
-import {setPage} from "../../store/actions/appActions";
-import {feedback, setSent} from "../../store/actions/feedbackActions";
-import * as s from './Feedback.module.css';
-import {log} from "util";
+import { RootState } from "../../store/store";
+import { useEffect, useState } from "react";
+import { setPage } from "../../store/actions/appActions";
+import { feedback, setSent } from "../../store/actions/feedbackActions";
+import s from './Feedback.module.css';
+import { log } from "util";
 
 const mapState = (state: RootState) => {
     return {
@@ -40,7 +40,7 @@ interface State {
 }
 
 const FeedbackContainer = (props: Props, state: State) => {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     useEffect(() => {
         props.setPage(2)
         props.setSent(undefined);
@@ -74,21 +74,21 @@ const FeedbackContainer = (props: Props, state: State) => {
         // }.bind(this);
     };
 
-    const onSubmit = (data:any): Promise<void> =>  {
-        const body:FormData = new FormData();
+    const onSubmit = (data: any): Promise<void> => {
+        const body: FormData = new FormData();
 
         body.append('subject', data.subject);
         body.append('username', data.username);
         data.email && body.append('email', data.email);
         data.phone && body.append('phone', data.phone);
-        data.message &&  body.append('message', data.message);
+        data.message && body.append('message', data.message);
         file && body.append('file', file);
 
         return props.feedback(body);
     };
 
     if (props.token) {
-        if(props.sent && props.sent === "ok"){
+        if (props.sent && props.sent === "ok") {
             return (
                 <div className={s.sent_message}>
                     <label>{t("Message sent successfully")}</label>
@@ -96,12 +96,12 @@ const FeedbackContainer = (props: Props, state: State) => {
             )
         }
         return <Feedback onSubmit={onSubmit}
-                         file={file}
-                         clearFile={clearFile}
-                         onChangeFileHandler={onChangeFileHandler}/>
+            file={file}
+            clearFile={clearFile}
+            onChangeFileHandler={onChangeFileHandler} />
     } else {
         if (props.isInitialized) {
-            return <Redirect to={"/contacts"}/>
+            return <Redirect to={"/contacts"} />
         }
         return <></>
     }

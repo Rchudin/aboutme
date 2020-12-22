@@ -1,8 +1,8 @@
 import * as React from "react";
-import * as s from './LanguageSwitch.module.css';
+import s from './LanguageSwitch.module.css';
 
 export interface LanguageSwitchProps {
-    changeLanguage: ()=>void
+    changeLanguage: () => void
     lag: string
 }
 
@@ -13,7 +13,7 @@ export default (props: LanguageSwitchProps) => {
             <div className={`${s.lng} ${s.deactivated}`}>
                 {(props.lag === "ru") ? "en" : "ru"}
             </div>
-            <span/>
+            <span />
             <div className={s.lng}>
                 {props.lag}
             </div>

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { gitHubUrl } from "../../utils/constants";
-import * as s from './ListWork.module.css';
+import s from './ListWork.module.css';
 
 export interface ListWorkProps {
     listWork: string[],

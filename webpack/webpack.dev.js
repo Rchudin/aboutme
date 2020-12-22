@@ -2,11 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 const ip = require('ip');
 const opn = require('opn');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-// const InterpolateHtmlPlugin = require('interpolate-html-plugin');
 const baseConfig = require('./webpack.config');
-const CopyPlugin = require('copy-webpack-plugin');
 
 const publicPath = '/';
 const publicUrl = '';
@@ -15,9 +13,9 @@ module.exports = merge(baseConfig, {
     mode: 'development',
     entry: './src/client.tsx',
     output: {
-        filename: 'js/[name].[hash].bundle.js',
         path: path.resolve(__dirname, '../dist'),
-        chunkFilename: 'js/[name].[hash].chunk.js',
+        filename: 'js/[name].[fullhash].bundle.js',
+        chunkFilename: 'js/[name].[fullhash].chunk.js',
         publicPath: publicPath
     },
     devtool: 'inline-source-map',
@@ -26,7 +24,7 @@ module.exports = merge(baseConfig, {
             {
                 test: /\.css$/i,
                 exclude: /\.module\.css$/i,
-                use: ['style-loader', 'css-loader' ],
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.module\.css$/i,
@@ -56,12 +54,6 @@ module.exports = merge(baseConfig, {
                 NODE_ENV: JSON.stringify('development'),
             }
         }),
-        // new CopyPlugin([
-        //     {from: './public', to: '', ignore: ['*.html']}
-        // ]),
-        // new InterpolateHtmlPlugin({
-        //     // 'PUBLIC_URL': publicUrl
-        // }),
         new webpack.HotModuleReplacementPlugin(),
     ],
     devServer: {
@@ -71,7 +63,7 @@ module.exports = merge(baseConfig, {
         hot: true,
         historyApiFallback: true,
         onListening: (server) => {
-            const {port} = server.listeningApp.address();
+            const { port } = server.listeningApp.address();
 
             console.log(`Listening http://${ip.address()}:${port}`);
             console.log(`Listening http://127.0.0.1:${port}`);

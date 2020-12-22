@@ -4,7 +4,7 @@
     flex-direction: column;
 }
 
-.main{
+.main {
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
@@ -22,11 +22,11 @@
     max-width: 45em;
 }
 
-.header{
+.header {
     margin-left: 0.25em;
 }
 
-.text{
+.text {
     margin-top: 0.5em;
     font-style: normal;
     font-weight: 500;
@@ -35,13 +35,14 @@
     text-transform: lowercase;
 }
 
-.block_links{
+.block_links {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
 .link {
+    display: block;
     color: var(--color-accent);
     font-style: normal;
     font-weight: 500;
@@ -58,7 +59,8 @@
     justify-content: flex-start;
     flex: 0 0 1.5rem;
 }
-.pagination a, svg{
+
+.pagination a, svg {
     width: 16px;
     height: 16px;
     padding: 0;

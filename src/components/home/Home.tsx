@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useTranslation } from "react-i18next";
-import * as s from './Home.module.css';
+import s from './Home.module.css';
 import {mobileSize} from "../../utils/constants";
 import backgroundImg from '../../assets/img/maninsmoke.png'
 import backgroundWebp from '../../assets/img/maninsmoke.webp'

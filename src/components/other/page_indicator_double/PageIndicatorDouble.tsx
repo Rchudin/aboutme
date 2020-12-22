@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as s from './PageIndicatorDouble.module.css';
+import s from './PageIndicatorDouble.module.css';
 
 
 export interface PageIndicatorDoubleProps {
@@ -13,7 +13,7 @@ export default (props: PageIndicatorDoubleProps) => {
             <div className={`${s.numbering} ${(props.page === 1) ? "" : s.numbering_deactivated}`}>
                 <label>1</label>
             </div>
-            <span/>
+            <span />
             <div className={`${s.numbering} ${(props.page === 2) ? "" : s.numbering_deactivated}`}>
                 <label>2</label>
             </div>

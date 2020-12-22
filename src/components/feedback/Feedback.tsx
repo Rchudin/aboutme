@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useTranslation } from "react-i18next";
 import { Field, InjectedFormProps, reduxForm } from "redux-form";
-import * as s from './Feedback.module.css';
+import s from './Feedback.module.css';
 import { emailOmitemptyValidation, maxLengthCreator, required } from "../../utils/validators";
 import { FeedbackInput } from "../other/feedback_Input/FeedbackInput";
 import { FeedbackTextarea } from "../other/feedback_textarea/FeedbackTextarea";

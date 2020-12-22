@@ -10,7 +10,7 @@ import store from "./store/store";
 import { Provider } from "react-redux";
 
 
-export default ({ assetsByChunkName }: any) => {
+export default (stats: any) => {
     return (req: any, res: Response, next: any) => {
         const context = {};
 
@@ -33,7 +33,7 @@ export default ({ assetsByChunkName }: any) => {
         res.status(200).send(Template({
             helmet: helmetContext.helmet,
             markup,
-            assetsByChunkName,
+            stats,
             lng: req.i18n.language,
             store
         }));

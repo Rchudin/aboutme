@@ -1,10 +1,10 @@
 import * as React from "react";
-import {connect, ConnectedProps} from "react-redux";
+import { connect, ConnectedProps } from "react-redux";
 import Communication from "./Communication";
-import {RootState} from "../../store/store";
-import {setPage} from "../../store/actions/appActions";
-import {useEffect, useState} from "react";
-import {useHistory} from "react-router-dom";
+import { RootState } from "../../store/store";
+import { setPage } from "../../store/actions/appActions";
+import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const feedbackURL = "/contacts/feedback"
 
@@ -66,7 +66,7 @@ const CommunicationContainer = (props: Props) => {
     const touchend = (e: any): void => {
         if (props.token) {
             const te = e.changedTouches[0].clientY;
-            if (ts > te+5) {
+            if (ts > te + 5) {
                 history.push(feedbackURL);
             }
             //  else if(ts < te-5){
@@ -76,14 +76,14 @@ const CommunicationContainer = (props: Props) => {
 
     }
     return <Communication copyEmail={copyEmail}
-                          copyTelegram={copyTelegram}
-                          feedbackURL={feedbackURL}
-                          onClickEmail={onClickEmail}
-                          onClickTelegram={onClickTelegram}
-                          token={props.token}
-                          wheel={wheel}
-                          touchstart={touchstart}
-                          touchend={touchend}/>
+        copyTelegram={copyTelegram}
+        feedbackURL={feedbackURL}
+        onClickEmail={onClickEmail}
+        onClickTelegram={onClickTelegram}
+        token={props.token}
+        wheel={wheel}
+        touchstart={touchstart}
+        touchend={touchend} />
 }
 
 

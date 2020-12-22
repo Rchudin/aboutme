@@ -1,9 +1,9 @@
 import * as React from "react";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CopyToClipboard from "react-copy-to-clipboard";
-import * as s from './Communication.module.css';
-import {email, linkedInUrl, telegram, telegramURL} from "../../utils/constants";
-import {useTranslation} from "react-i18next";
+import s from './Communication.module.css';
+import { email, linkedInUrl, telegram, telegramURL } from "../../utils/constants";
+import { useTranslation } from "react-i18next";
 
 
 export interface CommunicationProps {
@@ -11,8 +11,8 @@ export interface CommunicationProps {
     copyEmail: boolean
     copyTelegram: boolean
     feedbackURL: string
-    onClickEmail : () => void
-    onClickTelegram : () => void
+    onClickEmail: () => void
+    onClickTelegram: () => void
     wheel: (e: any) => void
     touchstart: (e: any) => void
     touchend: (e: any) => void
@@ -22,7 +22,7 @@ export default (props: CommunicationProps) => {
     const { t } = useTranslation();
 
     return (
-        <div className={s.content} onWheel = {props.wheel} onTouchStart={props.touchstart} onTouchEnd={props.touchend}>
+        <div className={s.content} onWheel={props.wheel} onTouchStart={props.touchstart} onTouchEnd={props.touchend}>
             <div className={s.main}>
                 <label className={s.header}>{t('get in touch')}</label>
                 <label className={s.text}>{t("let's build something great together")}</label>
@@ -34,8 +34,8 @@ export default (props: CommunicationProps) => {
                         {
                             props.copyEmail && (
                                 <span className={s.tooltip}>
-                                      {t('copied')}
-                                 </span>
+                                    {t('copied')}
+                                </span>
                             )
                         }
                     </div>
@@ -63,12 +63,12 @@ export default (props: CommunicationProps) => {
 
             <div className={s.pagination}>
                 {props.token &&
-                <NavLink to={props.feedbackURL} className={s.pagination}>
-                    <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.9975 0L8.5 6.18084L15.0025 0L17 1.90283L8.5 10L0 1.90283L1.9975 0Z"
-                              fill="white"/>
-                    </svg>
-                </NavLink>}
+                    <NavLink to={props.feedbackURL} className={s.pagination}>
+                        <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.9975 0L8.5 6.18084L15.0025 0L17 1.90283L8.5 10L0 1.90283L1.9975 0Z"
+                                fill="white" />
+                        </svg>
+                    </NavLink>}
             </div>
         </div>
     )

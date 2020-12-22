@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as s from './App.module.css';
+import s from './App.module.css';
 
 export interface AppMobileProps {
 }

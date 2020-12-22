@@ -1,7 +1,7 @@
 import * as React from "react";
-import {NavLink, Route, Switch} from "react-router-dom";
-import * as s from './App.module.css';
-import routesList, {routeType} from "../../utils/routes";
+import { NavLink, Route, Switch } from "react-router-dom";
+import s from './App.module.css';
+import routesList, { routeType } from "../../utils/routes";
 import Navbar from "../navbar/Navbar";
 import SocialLinks from "../sociallinks/SocialLinks";
 import logo from "../../assets/img/RC.png"
@@ -17,7 +17,7 @@ export default (props: AppDesktopProps) => {
             <div className={s.main}>
                 <div>
                     <NavLink to="/">
-                        <img src={logo} alt="logo" className={s.logo}/>
+                        <img src={logo} alt="logo" className={s.logo} />
                     </NavLink>
                 </div>
                 <Switch>
@@ -27,7 +27,7 @@ export default (props: AppDesktopProps) => {
                             path={route.path}
                             exact={route.exact}
                             render={props =>
-                                <route.component routes={route.routes}/>
+                                <route.component routes={route.routes} />
                             }
                         />
                     ))}
@@ -35,11 +35,11 @@ export default (props: AppDesktopProps) => {
             </div>
             <div className={s.navbar}>
                 <div className={s.lang}>
-                    <LanguageSwitchContainer/>
+                    <LanguageSwitchContainer />
                 </div>
-                <Navbar/>
+                <Navbar />
                 <div className={s.social}>
-                    <SocialLinks/>
+                    <SocialLinks />
                 </div>
             </div>
         </div>

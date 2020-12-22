@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useTranslation } from "react-i18next";
-import * as s from './Navbar.module.css';
+import s from './Navbar.module.css';
 import { NavLink } from "react-router-dom";
 import { WorkURL, AboutURL, ContactsURL } from "../../utils/routes"
 
