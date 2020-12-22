@@ -1,7 +1,12 @@
 export const SET_LIST_WORK = "work/SET_LIST_WORK";
 
+export type Work = {
+    name: string,
+    description: string | null,
+}
+
 export type WorkInitializingStateType = {
-    listWork: string[] | undefined
+    listWork: Work[] | undefined
 }
 const InitializingState: WorkInitializingStateType = {
     listWork: undefined,
@@ -24,5 +29,5 @@ export type WorkActionTypes =
 
 interface SetListWork {
     type: typeof SET_LIST_WORK
-    listWork: string[]
+    listWork: Work[]
 }

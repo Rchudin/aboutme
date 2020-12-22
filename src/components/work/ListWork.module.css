@@ -20,7 +20,7 @@
 .link {
     display: flex;
     color: var(--color-accent);
-    font-size: 7.5vw;
+    font-size: 2rem;
     padding: 1rem 0;
     margin: auto 0;
     font-weight: bold;

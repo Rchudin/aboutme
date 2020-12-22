@@ -1,11 +1,10 @@
 import * as React from "react";
-import {connect, ConnectedProps} from "react-redux";
+import { connect, ConnectedProps } from "react-redux";
 import debounce from "lodash/debounce"
-import AppMobile from './AppMobile'
 import AppDesktop from './AppDesktop'
-import {RootState} from "../../store/store";
-import {initialization, setIsMobile} from "../../store/actions/appActions";
-import {mobileSize} from "../../utils/constants";
+import { RootState } from "../../store/store";
+import { initialization, setIsMobile } from "../../store/actions/appActions";
+import { mobileSize } from "../../utils/constants";
 
 const mapState = (state: RootState) => {
     return {
@@ -38,7 +37,7 @@ class AppContainer extends React.Component<Props, State> {
         super(props);
     }
 
-    handleWindowSizeChange  = debounce(()=> {this.props.setIsMobile(window.innerWidth <= mobileSize)}, 200);
+    handleWindowSizeChange = debounce(() => { this.props.setIsMobile(window.innerWidth <= mobileSize) }, 200);
 
     componentDidMount(): void {
         this.props.initialization()
@@ -52,14 +51,10 @@ class AppContainer extends React.Component<Props, State> {
 
     render() {
         return (
-           // this.props.isMobile ? <AppMobile /> : <AppDesktop />
+            // this.props.isMobile ? <AppMobile /> : <AppDesktop />
             <AppDesktop />
         )
     }
 }
 
 export default connector(AppContainer)
-
-
-
-

@@ -1,9 +1,9 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
-import {withTitle} from "./withTitle"
+import { withTitle } from "./withTitle"
 import HomeContainer from "../components/home/HomeContainer";
-import Unitandzero from "../components/other/unitandzero/Unitandzero";
-//import WorkContainer from "../components/work/WorkContainer";
+// import Unitandzero from "../components/other/unitandzero/Unitandzero";
+import WorkContainer from "../components/work/WorkContainer";
 import About from "../components/about/About";
 import ContactsContainer from "../components/contacts/ContactsContainer";
 import FeedbackContainer from "../components/feedback/FeedbackContainer";
@@ -19,7 +19,7 @@ export const FeedbackURL: string = "/contacts/feedback"
 const HomeComponent = withTitle({ Component: HomeContainer, title: 'Home' });
 const AboutComponent = withTitle({ Component: About, title: 'About' });
 const ContactsComponent = withTitle({ Component: ContactsContainer, title: 'Contacts' });
-const WorkComponent = withTitle({ Component: Unitandzero, title: 'Work' });
+const WorkComponent = withTitle({ Component: WorkContainer, title: 'Work' });
 
 export type routeType = {
     component: any
@@ -43,7 +43,7 @@ const routesList: routeType[] = [
     {
         component: WorkComponent,
         path: WorkURL,
-        exact: true
+        exact: false
     },
     {
         component: ContactsComponent,
