@@ -25,4 +25,5 @@
     margin: auto 0;
     font-weight: bold;
     text-transform: uppercase;
+    cursor: pointer;
 }

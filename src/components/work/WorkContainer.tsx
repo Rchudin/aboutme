@@ -5,6 +5,7 @@ import { RootState } from "../../store/store";
 import ListWork from "./ListWork";
 import { fetchListWork } from "../../store/actions/workActions";
 import Unitandzero from "../other/unitandzero/Unitandzero";
+import DescriptionWork from "./DescriptionWork";
 import { Work } from "../../store/reducers/workReducer";
 import { WorkURL } from '../../utils/routes';
 
@@ -45,7 +46,7 @@ const ContactsContainer = (props: Props, state: State) => {
                         key={i}
                         path={`${WorkURL}/${work.name}`}
                         exact={true}
-                        render={() => <div>{work.name}</div>
+                        render={() => <DescriptionWork work={work} />
                         }
                     />
                 ))}

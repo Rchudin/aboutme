@@ -3,6 +3,9 @@ export const SET_LIST_WORK = "work/SET_LIST_WORK";
 export type Work = {
     name: string,
     description: string | null,
+    language: string | null,
+    html_git_url: string | null,
+    tags: string[],
 }
 
 export type WorkInitializingStateType = {

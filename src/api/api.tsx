@@ -17,7 +17,11 @@ export const baseAPI = {
             },
         })
     },
-    fetchListWork() {
-        return axios.get(`https://api.github.com/users/rchudin/repos`)
+    fetchGithubRepositories() {
+        return axios.get(`https://api.github.com/users/rchudin/repos`, {
+            headers: {
+                "Accept": "application/vnd.github.mercy-preview+json"
+            }
+        })
     },
 }

@@ -10,12 +10,16 @@ export const setListWork = (listWork: Work[]): WorkActionTypes => {
 };
 
 export const fetchListWork = () => async (dispatch: Dispatch): Promise<void> => {
-    let work: Work[] = [];
-    let github = baseAPI.fetchListWork().then(res => {
-        res.data.map(({ name, description }: { name: string, description: string | null }) => {
-            work.push({
+    let githubRepositories: Work[] = [];
+    let github = baseAPI.fetchGithubRepositories().then(res => {
+        res.data.map(({ name, description, html_url, language, topics }:
+            { name: string, description: string | null, html_url: string, language: string | null, topics: string[] }) => {
+            githubRepositories.push({
                 name: name,
                 description: description,
+                language: language,
+                html_git_url: html_url,
+                tags: topics,
             })
         })
     }).catch(error => {
@@ -35,7 +39,7 @@ export const fetchListWork = () => async (dispatch: Dispatch): Promise<void> => 
             //     }
             //     return 0;
             // });
-            dispatch(setListWork(work));
+            dispatch(setListWork([].concat(githubRepositories)));
         }
     )
 };
