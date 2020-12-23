@@ -1,6 +1,7 @@
 import { Dispatch } from "redux";
 import { baseAPI } from "../../api/api";
 import { SET_LIST_WORK, SET_LANGUAGES, WorkActionTypes, Work } from "../reducers/workReducer";
+import { shortNameProgramLang } from "../../utils/constants";
 
 export const setListWork = (listWork: Work[]): WorkActionTypes => {
     return {
@@ -21,6 +22,7 @@ export const fetchListWork = () => async (dispatch: Dispatch): Promise<void> => 
     let github = baseAPI.fetchGithubRepositories().then(res => {
         res.data.map(({ name, description, html_url, language, topics }:
             { name: string, description: string | null, html_url: string, language: string | null, topics: string[] }) => {
+            language = shortNameProgramLang(language);
             githubRepositories.push({
                 name: name,
                 description: description,
