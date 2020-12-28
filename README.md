@@ -1,7 +1,3 @@
-# Portfolio site
-
-Basic implementation of server-side rendering for a React application.
-
 ## Getting started 
 
 Installing all dependencies: `yarn install`
