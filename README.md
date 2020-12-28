@@ -1,4 +1,4 @@
-# React Server Side Rendering
+# Portfolio site
 
 Basic implementation of server-side rendering for a React application.
 
