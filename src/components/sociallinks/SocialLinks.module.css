@@ -7,16 +7,28 @@
     -webkit-user-select: none;
 }
 
+
+
+.link {
+    margin: 0 .8rem 0 0;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.link svg{
+    fill: var(--color-accent);
+    height: 100%;
+    width: 100%;
+}
+
+
 .content > :last-child{
     margin: 0;
 }
 
-.link {
-    margin: 0 .8rem 0 0;
-}
+/* LinkedIn  */
+.content > :first-child{
+    padding: 0.15rem;
+    padding-bottom: 0;
 
-.link, .link img{
-    height: 1.5rem;
-    width: auto;
 }
-

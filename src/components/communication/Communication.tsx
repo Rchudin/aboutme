@@ -2,7 +2,7 @@ import * as React from "react";
 import { NavLink } from "react-router-dom";
 import CopyToClipboard from "react-copy-to-clipboard";
 import s from './Communication.module.css';
-import { email, linkedInUrl, telegram, telegramURL } from "../../utils/constants";
+import { email, linkedInUrl } from "../../utils/constants";
 import { useTranslation } from "react-i18next";
 
 
@@ -40,21 +40,6 @@ export default (props: CommunicationProps) => {
                         }
                     </div>
                 </CopyToClipboard>
-                {/* <CopyToClipboard text={telegram}>
-                    <div className={s.link} onClick={props.onClickTelegram}>
-                        {telegram}
-                        {
-                            props.copyTelegram && (
-                                <span className={s.tooltip}>
-                                      {t('copied')}
-                                 </span>
-                            )
-                        }
-                    </div>
-                </CopyToClipboard>
-                <a target="_blank" href={telegramURL}>
-                    <div className={s.link}>telegram</div>
-                </a> */}
                 <a target="_blank" href={linkedInUrl}>
                     <div className={s.link}>linkedin</div>
                 </a>
@@ -62,14 +47,19 @@ export default (props: CommunicationProps) => {
 
 
             <div className={s.pagination}>
-                {props.token &&
+                {props.token && (
                     <NavLink to={props.feedbackURL} className={s.pagination}>
-                        <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.9975 0L8.5 6.18084L15.0025 0L17 1.90283L8.5 10L0 1.90283L1.9975 0Z"
-                                fill="white" />
-                        </svg>
-                    </NavLink>}
+                        <ArrowDown />
+                    </NavLink>
+                )}
             </div>
         </div>
     )
 }
+
+const ArrowDown = () => (
+    <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.9975 0L8.5 6.18084L15.0025 0L17 1.90283L8.5 10L0 1.90283L1.9975 0Z"
+            fill="white" />
+    </svg>
+)

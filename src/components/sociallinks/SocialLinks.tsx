@@ -1,9 +1,6 @@
 import * as React from "react";
 import s from './SocialLinks.module.css';
-import { gitHubUrl, instagramUrl, linkedInUrl } from "../../utils/constants";
-import linkedInIcon from "../../assets/svg/linkedin.svg"
-import githubIcon from "../../assets/svg/github.svg"
-import instagramIcon from "../../assets/svg/inst.svg"
+import { gitHubUrl, linkedInUrl } from "../../utils/constants";
 
 
 export interface SocialLinksProps {
@@ -13,15 +10,30 @@ export interface SocialLinksProps {
 export default (props: SocialLinksProps) => {
     return (
         <div className={s.content}>
-            <a target="_blank" className={s.link} href={instagramUrl}>
+            {/* <a target="_blank" className={s.link} href={instagramUrl}>
                 <img alt="Instagram" src={instagramIcon} />
+            </a> */}
+            <a target="_blank" className={s.link} href={linkedInUrl}>
+                <LinkedInIcon />
             </a>
-            {/*<a target="_blank" className={s.link} href={linkedInUrl}>*/}
-            {/*    <img alt="LinkedIn" src={linkedInIcon}/>*/}
-            {/*</a>*/}
             <a target="_blank" className={s.link} href={gitHubUrl}>
-                <img alt="GitHub" src={githubIcon} />
+                <GitHubIcon />
             </a>
         </div>
     )
 };
+
+
+const GitHubIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fillRule="evenodd" clipRule="evenodd" d="M12 0.658997C5.37 0.658997 0 6.16482 0 12.9625C0 18.4068 3.435 23.0053 8.205 24.6355C8.805 24.7431 9.03 24.374 9.03 24.0511C9.03 23.7589 9.015 22.79 9.015 21.7595C6 22.3286 5.22 21.006 4.98 20.3139C4.845 19.9602 4.26 18.8682 3.75 18.576C3.33 18.3453 2.73 17.7763 3.735 17.7609C4.68 17.7455 5.355 18.6529 5.58 19.022C6.66 20.8829 8.385 20.36 9.075 20.0371C9.18 19.2373 9.495 18.699 9.84 18.3915C7.17 18.0839 4.38 17.0227 4.38 12.3166C4.38 10.9786 4.845 9.87126 5.61 9.01001C5.49 8.70243 5.07 7.44132 5.73 5.74958C5.73 5.74958 6.735 5.42661 9.03 7.01069C9.99 6.73386 11.01 6.59545 12.03 6.59545C13.05 6.59545 14.07 6.73386 15.03 7.01069C17.325 5.41123 18.33 5.74958 18.33 5.74958C18.99 7.44132 18.57 8.70243 18.45 9.01001C19.215 9.87126 19.68 10.9632 19.68 12.3166C19.68 17.0381 16.875 18.0839 14.205 18.3915C14.64 18.7759 15.015 19.5142 15.015 20.6676C15.015 22.3132 15 23.6358 15 24.0511C15 24.374 15.225 24.7585 15.825 24.6355C20.565 23.0053 24 18.3915 24 12.9625C24 6.16482 18.63 0.658997 12 0.658997Z" fill="white" />
+    </svg>
+)
+
+const LinkedInIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.45308 7.79846H0.296875V23.9999H5.45308V7.79846Z" fill="white" />
+        <path d="M22.3748 9.27832C21.2917 8.04121 19.8591 7.42255 18.078 7.42255C17.4218 7.42255 16.8252 7.50701 16.2887 7.67605C15.7523 7.84497 15.2993 8.08198 14.9294 8.38719C14.5597 8.6924 14.2652 8.97574 14.0467 9.2372C13.8388 9.48555 13.6356 9.77484 13.4372 10.1021V7.7983H8.29639L8.31215 8.58315C8.32271 9.10647 8.32791 10.7194 8.32791 13.4223C8.32791 16.1254 8.31751 19.6512 8.29661 24H13.4372V14.9589C13.4372 14.4032 13.4942 13.9619 13.609 13.6346C13.8279 13.0785 14.1583 12.6129 14.6013 12.237C15.0442 11.8607 15.5935 11.6727 16.2499 11.6727C17.1455 11.6727 17.8046 11.9969 18.2265 12.6454C18.6483 13.2939 18.8592 14.1904 18.8592 15.3348V23.9995H23.9999V14.714C23.9995 12.3268 23.4582 10.515 22.3748 9.27832Z" fill="white" />
+        <path d="M2.9062 0C2.04172 0 1.34126 0.264496 0.804659 0.792974C0.26811 1.32157 0 1.98891 0 2.79562C0 3.59106 0.260394 4.25611 0.781236 4.79003C1.30191 5.324 1.98951 5.59113 2.84364 5.59113H2.87489C3.74999 5.59113 4.45581 5.32423 4.99219 4.79003C5.52858 4.25611 5.79154 3.59129 5.7812 2.79562C5.7708 1.98896 5.50499 1.32157 4.98431 0.792974C4.46369 0.264267 3.77073 0 2.9062 0Z" fill="white" />
+    </svg>
+)
