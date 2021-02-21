@@ -25,7 +25,10 @@ export default (props: ListWorkProps) => {
         <div className={s.content}>
             <div className={s.list_filters}>
                 {props.programLang.map((x: string, index: number) => (
-                    <div key={index} className={`${s.filter} ${filter === x && s.filter_active} ${filter && filter !== x && s.filter_deactivate}`} onClick={() => { onClickFilter(x) }}>{x}</div>
+                    <div key={index} className={`${s.filter} ${filter === x ? s.filter_active : ""} ${filter && filter !== x ? s.filter_deactivate : ""}`}
+                        onClick={() => { onClickFilter(x) }}>
+                        {x}
+                    </div>
                 ))}
             </div>
             {props.listWork.map((x: Work, index: number) => {
