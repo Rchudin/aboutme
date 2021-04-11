@@ -61,14 +61,16 @@
 }
 
 .pagination a, svg {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     padding: 0;
 }
 
 .pagination svg {
     fill: var(--color-accent);
     /*transform: rotate(-90deg);*/
+    transform: scale(.85);
+    animation: pulse 2s ease-in-out infinite;
 }
 
 .tooltip {
@@ -78,3 +80,15 @@
     z-index: 10;
     opacity: .5;
 }
+
+@keyframes pulse {
+    from {
+      transform: scale(.85);
+    }
+    50% {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(.85);
+    }
+  }
